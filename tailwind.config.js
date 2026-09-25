@@ -1,0 +1,182 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: 'class',
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        surface: 'rgb(var(--color-surface) / <alpha-value>)',
+        'surface-dim': 'rgb(var(--color-surface-dim) / <alpha-value>)',
+        'surface-bright': 'rgb(var(--color-surface-bright) / <alpha-value>)',
+        'surface-container-lowest': 'rgb(var(--color-surface-container-lowest) / <alpha-value>)',
+        'surface-container-low': 'rgb(var(--color-surface-container-low) / <alpha-value>)',
+        'surface-container': 'rgb(var(--color-surface-container) / <alpha-value>)',
+        'surface-container-high': 'rgb(var(--color-surface-container-high) / <alpha-value>)',
+        'surface-container-highest': 'rgb(var(--color-surface-container-highest) / <alpha-value>)',
+        'surface-variant': 'rgb(var(--color-surface-container-highest) / <alpha-value>)',
+        'on-surface': 'rgb(var(--color-on-surface) / <alpha-value>)',
+        'on-surface-variant': 'rgb(var(--color-on-surface-variant) / <alpha-value>)',
+        outline: 'rgb(var(--color-outline) / <alpha-value>)',
+        'outline-variant': 'rgb(var(--color-outline-variant) / <alpha-value>)',
+        primary: 'rgb(var(--color-primary) / <alpha-value>)',
+        'primary-container': 'rgb(var(--color-primary-container) / <alpha-value>)',
+        'on-primary': 'rgb(var(--color-on-primary) / <alpha-value>)',
+        'on-primary-container': 'rgb(var(--color-on-primary-container) / <alpha-value>)',
+        secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+        'secondary-container': 'rgb(var(--color-secondary-container) / <alpha-value>)',
+        'on-secondary': 'rgb(var(--color-on-secondary) / <alpha-value>)',
+        'on-secondary-container': 'rgb(var(--color-on-secondary-container) / <alpha-value>)',
+        tertiary: 'rgb(var(--color-tertiary) / <alpha-value>)',
+        'tertiary-container': 'rgb(var(--color-tertiary-container) / <alpha-value>)',
+        'on-tertiary': 'rgb(var(--color-on-tertiary) / <alpha-value>)',
+        'on-tertiary-container': 'rgb(var(--color-on-tertiary-container) / <alpha-value>)',
+        error: 'rgb(var(--color-error) / <alpha-value>)',
+        'error-container': 'rgb(var(--color-error-container) / <alpha-value>)',
+        'on-error': 'rgb(var(--color-on-error) / <alpha-value>)',
+        'on-error-container': 'rgb(var(--color-on-error-container) / <alpha-value>)',
+        background: 'rgb(var(--color-background) / <alpha-value>)',
+        'on-background': 'rgb(var(--color-on-background) / <alpha-value>)',
+        'primary-fixed': '#dbe1ff',
+        'primary-fixed-dim': '#b5c4ff',
+        'on-primary-fixed': '#00164d',
+        'secondary-fixed': '#8ff7bf',
+        'secondary-fixed-dim': '#73daa4',
+        'tertiary-fixed': '#ffddb8',
+        'tertiary-fixed-dim': '#ffb961',
+        'inverse-surface': '#2b3138',
+        'inverse-on-surface': '#ecf1fa',
+        'inverse-primary': '#b5c4ff',
+      },
+      borderRadius: {
+        DEFAULT: '0.25rem',
+        sm: '0.125rem',
+        md: '0.375rem',
+        lg: '0.5rem',
+        xl: '0.75rem',
+        '2xl': '1rem',
+        full: '9999px',
+      },
+      spacing: {
+        'space-xs': '0.25rem',
+        'space-sm': '0.5rem',
+        'space-md': '0.75rem',
+        'space-lg': '1rem',
+        'space-xl': '1.5rem',
+        margin: '1.5rem',
+        gutter: '1rem',
+      },
+      fontFamily: {
+        sans: ['Geist', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['Geist', 'Inter', 'sans-serif'],
+        eyebrow: ['JetBrains Mono', 'monospace'],
+        'tabular-mono': ['JetBrains Mono', 'monospace'],
+        'tabular-mono-dense': ['JetBrains Mono', 'monospace'],
+        'headline-lg': ['Geist', 'sans-serif'],
+        'headline-md': ['Geist', 'sans-serif'],
+        'headline-sm': ['Geist', 'sans-serif'],
+        'title-lg': ['Geist', 'sans-serif'],
+        'title-md': ['Geist', 'sans-serif'],
+        'body-default': ['Geist', 'sans-serif'],
+        'body-dense': ['Geist', 'sans-serif'],
+      },
+      fontSize: {
+        eyebrow: [
+          '11px',
+          {
+            lineHeight: '16px',
+            letterSpacing: '0.08em',
+            fontWeight: '500',
+          },
+        ],
+        'tabular-mono-dense': [
+          '11px',
+          {
+            lineHeight: '16px',
+            fontWeight: '400',
+          },
+        ],
+        'tabular-mono': [
+          '13px',
+          {
+            lineHeight: '18px',
+            fontWeight: '400',
+          },
+        ],
+        'body-dense': [
+          '13px',
+          {
+            lineHeight: '18px',
+            fontWeight: '400',
+          },
+        ],
+        'body-default': [
+          '15px',
+          {
+            lineHeight: '22px',
+            fontWeight: '400',
+          },
+        ],
+        'title-md': [
+          '17px',
+          {
+            lineHeight: '24px',
+            fontWeight: '500',
+          },
+        ],
+        'title-lg': [
+          '20px',
+          {
+            lineHeight: '28px',
+            letterSpacing: '-0.005em',
+            fontWeight: '500',
+          },
+        ],
+        'headline-sm': [
+          '24px',
+          {
+            lineHeight: '32px',
+            letterSpacing: '-0.01em',
+            fontWeight: '500',
+          },
+        ],
+        'headline-md': [
+          '32px',
+          {
+            lineHeight: '40px',
+            letterSpacing: '-0.01em',
+            fontWeight: '600',
+          },
+        ],
+        'headline-lg-mobile': [
+          '32px',
+          {
+            lineHeight: '40px',
+            letterSpacing: '-0.01em',
+            fontWeight: '600',
+          },
+        ],
+        'headline-lg': [
+          '40px',
+          {
+            lineHeight: '48px',
+            letterSpacing: '-0.02em',
+            fontWeight: '600',
+          },
+        ],
+        display: [
+          '56px',
+          {
+            lineHeight: '64px',
+            letterSpacing: '-0.02em',
+            fontWeight: '600',
+          },
+        ],
+      },
+    },
+  },
+  plugins: [],
+}
