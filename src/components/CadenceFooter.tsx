@@ -102,16 +102,19 @@ export default function CadenceFooter() {
               Company
             </span>
             <Link href="/company" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
-              About Cadence
+              The Quantum Primes
             </Link>
-            <Link href="/company#principles" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
-              OR Principles
+            <Link href="/contact" className="font-body-dense text-body-dense text-primary hover:text-primary-container font-semibold transition-colors">
+              Contact Desk
+            </Link>
+            <a href="mailto:thequantumprimes@gmail.com" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
+              thequantumprimes@gmail.com
+            </a>
+            <Link href="/company#flagship-product" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
+              Scheduler Architecture
             </Link>
             <Link href="/security" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
               Security & Compliance
-            </Link>
-            <Link href="/security#airgap" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
-              Air-Gapped Deployment
             </Link>
           </div>
         </div>
@@ -119,29 +122,29 @@ export default function CadenceFooter() {
         {/* Bottom bar */}
         <div className="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-tabular-mono-dense text-tabular-mono-dense">
           <div className="flex items-center gap-space-md flex-wrap">
-            <span>© 2025 Cadence APS Inc. All rights reserved.</span>
+            <span>© 2026 The Quantum Primes. All rights reserved.</span>
             <div className="inline-flex items-center gap-1.5 text-on-surface">
               <span className="w-2 h-2 rounded-full bg-secondary inline-block animate-pulse"></span>
-              <span>All solver systems operational (99.98% uptime)</span>
+              <span>CP-SAT Solver Engine Active (99.98% uptime)</span>
             </div>
           </div>
           <div className="flex items-center gap-space-lg">
-            <Link href="/security" className="hover:text-on-surface transition-colors">
-              SOC 2 Type II
+            <Link href="/contact" className="hover:text-on-surface transition-colors">
+              Contact Support
             </Link>
             <Link href="/security" className="hover:text-on-surface transition-colors">
-              ISO 27001
+              SOC 2 Type II
             </Link>
             <Link href="/docs" className="hover:text-on-surface transition-colors">
               OpenAPI v3
             </Link>
             <a
-              href="http://localhost:3000"
+              href="http://localhost:5173"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline font-medium"
             >
-              Launch Portal →
+              Launch Scheduler Demo (5173) →
             </a>
           </div>
         </div>

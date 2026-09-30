@@ -7,560 +7,343 @@ import CadenceFooter from '@/components/CadenceFooter';
 import CadenceDemoModal from '@/components/CadenceDemoModal';
 import { FadeIn, FadeInStagger } from '@/components/Motion';
 
-export default function Page() {
+export default function CompanyPage() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-surface text-on-surface flex flex-col selection:bg-primary/20 transition-colors">
       <CadenceHeader onOpenDemoModal={() => setIsDemoModalOpen(true)} />
-      
+
       <main className="w-full pt-16 bg-surface flex-1">
         <div className="flex flex-col w-full">
-{/* Telemetry Bar / Sub-header Meta Track */}
-<div className="w-full bg-surface-container-low px-margin py-2.5">
-<div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs text-on-surface-variant font-eyebrow text-eyebrow uppercase tracking-widest">
-<div className="flex items-center gap-space-sm flex-wrap">
-<span className="inline-flex items-center gap-1.5 text-primary font-semibold">
-<span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-          COMPANY // OPERATIONS RESEARCH LAB &amp; INDUSTRIAL ADVISORY
-        </span>
-<span className="text-outline-variant hidden sm:inline">•</span>
-<span className="text-on-surface-variant">FOUNDED 2022</span>
-</div>
-<div className="flex items-center gap-space-md text-on-surface-variant">
-<span className="inline-flex items-center gap-1">
-<span className="material-symbols-outlined text-[14px] text-outline">location_on</span>
-          SAN FRANCISCO, CA &amp; ZÜRICH, CH
-        </span>
-<span className="text-outline-variant">•</span>
-<span className="text-secondary font-medium">48 GLOBAL PLANTS POWERED</span>
-</div>
-</div>
-</div>
-{/* Hero Section */}
-<section className="relative w-full overflow-hidden px-margin pt-12 pb-16">
-{/* Subtle architectural canvas grid backdrop */}
-<div className="absolute inset-0 bg-gradient-to-b from-surface-container-low via-surface to-surface pointer-events-none -z-10"></div>
-<div className="absolute -top-32 right-0 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
-<div className="max-w-7xl mx-auto flex flex-col gap-space-xl">
-{/* Eyebrow & Status Flag */}
-<div className="flex flex-wrap items-center gap-space-sm">
-<span className="inline-flex items-center gap-1.5 px-space-sm py-1 rounded bg-primary-fixed text-on-primary-fixed font-eyebrow text-eyebrow uppercase font-medium">
-<span className="material-symbols-outlined text-[13px]">terminal</span>
-          OUR MISSION // DETERMINISTIC INDUSTRIAL COMPUTING
-        </span>
-<span className="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-surface-container text-on-surface-variant font-tabular-mono-dense text-tabular-mono-dense">
-<span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-          MILP &amp; CP-SAT HYBRID KERNEL
-        </span>
-</div>
-{/* Main Headline & Subtitle */}
-<div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
-<div className="lg:col-span-8 flex flex-col gap-space-md">
-<h1 className="font-display text-headline-lg lg:text-display text-on-surface tracking-tight leading-[1.08]">
-            Replacing heuristic schedule fiction with <span className="text-primary-container inline-block underline decoration-primary/20 decoration-2 underline-offset-8">mathematical ground truth.</span>
-</h1>
-<p className="font-body-default text-title-md text-on-surface-variant leading-relaxed pt-space-xs max-w-3xl">
-            Modern factories run on physics, chemistry, and human labor — yet production schedules have been managed on static spreadsheets and flawed linear heuristics for forty years. Cadence was founded by operations research scientists and plant automation veterans to bring exact combinatorial optimization to the physical economy.
-          </p>
-</div>
-{/* Terminal-inspired solver execution card */}
-<div className="lg:col-span-4 bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
-<div className="flex items-center justify-between pb-space-xs border-b border-surface-container">
-<div className="flex items-center gap-1.5">
-<div className="w-2.5 h-2.5 rounded-full bg-surface-container-high"></div>
-<div className="w-2.5 h-2.5 rounded-full bg-surface-container-high"></div>
-<div className="w-2.5 h-2.5 rounded-full bg-surface-container-high"></div>
-<span className="font-eyebrow text-eyebrow text-on-surface-variant ml-2 uppercase">solver_kernel.log</span>
-</div>
-<span className="font-tabular-mono-dense text-tabular-mono-dense text-secondary">OPTIMAL</span>
-</div>
-<div className="font-tabular-mono-dense text-tabular-mono-dense text-on-surface-variant space-y-1 py-1">
-<p><span className="text-outline">&gt;</span> <span className="text-primary font-medium">BRANCH_AND_BOUND</span> init (threads: 64)</p>
-<p><span className="text-outline">&gt;</span> 428,190 decision vars loaded</p>
-<p><span className="text-outline">&gt;</span> 1,294,011 disjunctive constraints</p>
-<p><span className="text-outline">&gt;</span> Gap: <span className="text-secondary font-medium">0.000%</span> (provably optimal)</p>
-<p className="text-on-surface font-medium pt-1"><span className="text-outline">&gt;</span> Dispatched: 14 lines, 0 SLA penalties</p>
-</div>
-<div className="pt-space-xs flex items-center justify-between text-on-surface-variant font-eyebrow text-eyebrow uppercase bg-surface-container-low px-2 py-1.5 rounded">
-<span>Convergence: 418ms</span>
-<span className="text-primary font-semibold">100% Deterministic</span>
-</div>
-</div>
-</div>
-{/* Primary Metric Strip (4 Columns) */}
-<div className="grid grid-cols-2 md:grid-cols-4 gap-space-md pt-space-md">
-{/* Metric 1 */}
-<div className="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-xs hover:bg-surface-container-low transition-colors">
-<span className="font-eyebrow text-eyebrow uppercase text-on-surface-variant tracking-wider">Active Enterprise Plants</span>
-<div className="flex items-baseline gap-space-xs">
-<span className="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">48</span>
-<span className="font-eyebrow text-eyebrow text-secondary font-medium">+14 YoY</span>
-</div>
-<p className="font-body-dense text-body-dense text-on-surface-variant pt-space-xs">Continuous &amp; high-mix discrete global sites</p>
-</div>
-{/* Metric 2 */}
-<div className="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-xs hover:bg-surface-container-low transition-colors">
-<span className="font-eyebrow text-eyebrow uppercase text-on-surface-variant tracking-wider">Direct Margin Recaptured</span>
-<div className="flex items-baseline gap-space-xs">
-<span className="font-headline-lg text-headline-lg text-primary font-semibold tracking-tight">$18.4M</span>
-<span className="material-symbols-outlined text-[18px] text-primary">trending_up</span>
-</div>
-<p className="font-body-dense text-body-dense text-on-surface-variant pt-space-xs">Through eliminated clean-in-place waste</p>
-</div>
-{/* Metric 3 */}
-<div className="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-xs hover:bg-surface-container-low transition-colors">
-<span className="font-eyebrow text-eyebrow uppercase text-on-surface-variant tracking-wider">Mathematical Proof</span>
-<div className="flex items-baseline gap-space-xs">
-<span className="font-headline-lg text-headline-lg text-secondary font-semibold tracking-tight">100%</span>
-<span className="font-eyebrow text-eyebrow text-on-surface-variant">Deterministic</span>
-</div>
-<p className="font-body-dense text-body-dense text-on-surface-variant pt-space-xs">Zero linear heuristic approximation</p>
-</div>
-{/* Metric 4 */}
-<div className="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-xs hover:bg-surface-container-low transition-colors">
-<span className="font-eyebrow text-eyebrow uppercase text-on-surface-variant tracking-wider">Median Convergence</span>
-<div className="flex items-baseline gap-space-xs">
-<span className="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">418<span className="text-title-lg font-normal text-on-surface-variant">ms</span></span>
-<span className="font-eyebrow text-eyebrow text-primary">p99 &lt; 1.2s</span>
-</div>
-<p className="font-body-dense text-body-dense text-on-surface-variant pt-space-xs">Real-time shop floor re-dispatch rate</p>
-</div>
-</div>
-</div>
-</section>
-{/* Engineering Philosophy: 3 Core Tenets */}
-<section className="w-full px-margin py-16 bg-surface-container-low">
-<div className="max-w-7xl mx-auto flex flex-col gap-space-xl">
-<div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
-<div className="max-w-2xl flex flex-col gap-space-xs">
-<span className="font-eyebrow text-eyebrow uppercase text-primary tracking-widest font-semibold">Engineering Philosophy // Non-Negotiable Axioms</span>
-<h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">Three principles of deterministic dispatching</h2>
-</div>
-<p className="font-body-dense text-body-dense text-on-surface-variant max-w-md">
-          Industrial production systems collapse when mathematical models diverge from thermal, chemical, and human limits on the shop floor.
-        </p>
-</div>
-{/* Bento Cards Grid for 3 Tenets */}
-<div className="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
-{/* Tenet 01 */}
-<div className="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between gap-space-lg hover:shadow-md transition-shadow">
-<div className="flex flex-col gap-space-md">
-<div className="flex items-center justify-between">
-<span className="px-space-sm py-1 rounded bg-surface-container font-tabular-mono-dense text-tabular-mono-dense text-on-surface-variant font-medium">TENET 01</span>
-<span className="material-symbols-outlined text-primary text-[28px]">thermostat</span>
-</div>
-<h3 className="font-title-lg text-title-lg text-on-surface font-semibold">Physics Over Averages</h3>
-<p className="font-body-default text-body-default text-on-surface-variant leading-relaxed">
-              Standard APS systems treat changeovers as fixed static averages. In reality, washdowns and setups are sequence-dependent, non-linear, and governed by thermodynamic and chemical decay. We model the physical plant as it actually exists.
-            </p>
-</div>
-{/* Visual proof diagram snippet */}
-<div className="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
-<div className="flex justify-between items-center text-on-surface-variant font-eyebrow text-eyebrow uppercase">
-<span>Dynamic Matrix vs Fixed Avg</span>
-<span className="text-error font-medium">-44% CIP Dwell</span>
-</div>
-<div className="w-full bg-surface-container h-2 rounded-full overflow-hidden flex">
-<div className="bg-error h-full" style={{width: '70%'}}></div>
-<div className="bg-primary-container h-full" style={{width: '30%'}}></div>
-</div>
-<div className="flex justify-between text-on-surface-variant font-tabular-mono-dense text-tabular-mono-dense pt-1">
-<span>Standard APS: 120m avg</span>
-<span className="text-primary font-medium">Cadence: 68m exact</span>
-</div>
-</div>
-</div>
-{/* Tenet 02 */}
-<div className="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between gap-space-lg hover:shadow-md transition-shadow">
-<div className="flex flex-col gap-space-md">
-<div className="flex items-center justify-between">
-<span className="px-space-sm py-1 rounded bg-surface-container font-tabular-mono-dense text-tabular-mono-dense text-on-surface-variant font-medium">TENET 02</span>
-<span className="material-symbols-outlined text-secondary text-[28px]">verified</span>
-</div>
-<h3 className="font-title-lg text-title-lg text-on-surface font-semibold">Zero Schedule Fiction</h3>
-<p className="font-body-default text-body-default text-on-surface-variant leading-relaxed">
-              A schedule that cannot be executed on the factory floor is an expensive hallucination. Every dispatch produced by Cadence respects secondary crew pools, buffer holding dwell-times, and tooling contention as hard disjunctive constraints.
-            </p>
-</div>
-{/* Constraint execution snippet */}
-<div className="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
-<div className="flex justify-between items-center text-on-surface-variant font-eyebrow text-eyebrow uppercase">
-<span>Hard Constraint Validation</span>
-<span className="text-secondary font-medium">0 Infeasibilities</span>
-</div>
-<div className="grid grid-cols-1 sm:grid-cols-3 gap-1.5 pt-1 font-tabular-mono-dense text-tabular-mono-dense text-center">
-<div className="bg-surface-container py-1 rounded text-on-surface">CIP Crews ✓</div>
-<div className="bg-surface-container py-1 rounded text-on-surface">Tooling ✓</div>
-<div className="bg-surface-container py-1 rounded text-on-surface">Tanks ✓</div>
-</div>
-</div>
-</div>
-{/* Tenet 03 */}
-<div className="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between gap-space-lg hover:shadow-md transition-shadow">
-<div className="flex flex-col gap-space-md">
-<div className="flex items-center justify-between">
-<span className="px-space-sm py-1 rounded bg-surface-container font-tabular-mono-dense text-tabular-mono-dense text-on-surface-variant font-medium">TENET 03</span>
-<span className="material-symbols-outlined text-primary text-[28px]">lock</span>
-</div>
-<h3 className="font-title-lg text-title-lg text-on-surface font-semibold">Air-Gapped Sovereignty</h3>
-<p className="font-body-default text-body-default text-on-surface-variant leading-relaxed">
-              Manufacturing intellectual property and proprietary formulation recipes must never leave plant boundaries or train third-party models. We engineer sovereign, zero-ingress computational engines built for the world's most critical supply chains.
-            </p>
-</div>
-{/* Sovereign architecture snippet */}
-<div className="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
-<div className="flex justify-between items-center text-on-surface-variant font-eyebrow text-eyebrow uppercase">
-<span>Security Perimeter</span>
-<span className="text-primary font-medium">Zero-Ingress</span>
-</div>
-<div className="flex items-center gap-space-xs text-on-surface-variant font-tabular-mono-dense text-tabular-mono-dense pt-1">
-<span className="material-symbols-outlined text-[16px] text-secondary">security</span>
-<span>On-Premise or VPC Single-Tenant Isolated</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-{/* Operations Research Leadership & Scientific Board */}
-<section className="w-full px-margin py-16 bg-surface">
-<div className="max-w-7xl mx-auto flex flex-col gap-space-xl">
-<div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
-<div className="max-w-2xl flex flex-col gap-space-xs">
-<span className="font-eyebrow text-eyebrow uppercase text-primary tracking-widest font-semibold">Leadership &amp; Advisory // Operations Research Lab</span>
-<h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">Scientists and plant operators, not generic SaaS executives</h2>
-</div>
-<div className="flex items-center gap-space-sm">
-<span className="font-tabular-mono-dense text-tabular-mono-dense text-on-surface-variant">Combined 70+ peer-reviewed OR publications</span>
-</div>
-</div>
-{/* Profile Cards Grid (4 Persons) */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
-{/* Dr. Elena Vance */}
-<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md group hover:bg-surface-container-low transition-colors">
-<div className="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container">
-<img className="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-300" alt="Dr. Elena Vance, Co-Founder & Chief Scientist" src="/images/avatar-elena.jpg" loading="lazy" />
-<div className="absolute bottom-2 left-2 bg-inverse-surface/85 backdrop-blur-sm text-inverse-on-surface font-eyebrow text-eyebrow px-2 py-0.5 rounded">
-              EX-MIT ORC
+          {/* Telemetry Bar / Sub-header Meta Track */}
+          <div className="w-full bg-surface-container-low px-4 sm:px-6 lg:px-8 py-2.5 border-b border-outline-variant/30">
+            <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-on-surface-variant font-eyebrow text-[11px] uppercase tracking-widest">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="inline-flex items-center gap-1.5 text-primary font-semibold">
+                  <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                  THE QUANTUM PRIMES // INDUSTRIAL OPTIMIZATION &amp; APPLIED AI
+                </span>
+                <span className="text-outline-variant hidden sm:inline">•</span>
+                <span className="text-on-surface-variant">PARENT COMPANY</span>
+              </div>
+              <div className="flex items-center gap-4 text-on-surface-variant">
+                <span className="inline-flex items-center gap-1">
+                  <span className="material-symbols-outlined text-[14px] text-outline">mail</span>
+                  thequantumprimes@gmail.com
+                </span>
+                <span className="text-outline-variant hidden md:inline">•</span>
+                <span className="text-secondary font-medium">FLAGSHIP: CADENCE APS SCHEDULER</span>
+              </div>
             </div>
-</div>
-<div className="flex flex-col gap-1">
-<h3 className="font-title-md text-title-md text-on-surface font-semibold">Dr. Elena Vance, Ph.D.</h3>
-<span className="font-eyebrow text-eyebrow text-primary uppercase">Co-Founder &amp; Chief Scientist</span>
-<p className="font-body-dense text-body-dense text-on-surface-variant pt-2 leading-normal">
-              Former Principal Research Scientist in Discrete Optimization at MIT. Author of 14 foundational papers on CP-SAT and Branch-and-Bound algorithms for NP-hard disjunctive scheduling.
-            </p>
-</div>
-<div className="mt-auto pt-space-xs flex items-center gap-1.5 text-outline text-eyebrow font-eyebrow">
-<span className="material-symbols-outlined text-[14px]">menu_book</span>
-<span>14 Papers Indexed</span>
-</div>
-</div>
-{/* Marcus Sterling */}
-<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md group hover:bg-surface-container-low transition-colors">
-<div className="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container">
-<img className="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-300" alt="Marcus Sterling, Co-Founder & CEO" src="/images/avatar-marcus.jpg" loading="lazy" />
-<div className="absolute bottom-2 left-2 bg-inverse-surface/85 backdrop-blur-sm text-inverse-on-surface font-eyebrow text-eyebrow px-2 py-0.5 rounded">
-              18 YRS PLANT OPS
+          </div>
+
+          {/* Hero Section */}
+          <section className="relative w-full overflow-hidden px-4 sm:px-6 lg:px-8 pt-12 pb-16">
+            <div className="absolute inset-0 bg-gradient-to-b from-surface-container-low via-surface to-surface pointer-events-none -z-10"></div>
+            <div className="max-w-7xl mx-auto flex flex-col gap-10">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-primary/10 text-primary font-eyebrow text-xs uppercase font-medium">
+                  <span className="material-symbols-outlined text-[14px]">corporate_fare</span>
+                  ABOUT THE COMPANY
+                </span>
+                <span className="inline-flex items-center gap-1 px-3 py-1 rounded bg-surface-container text-on-surface-variant font-tabular-mono-dense text-xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  THE QUANTUM PRIMES
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                <div className="lg:col-span-8 flex flex-col gap-5">
+                  <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-on-surface tracking-tight leading-tight">
+                    Engineering deterministic mathematical optimization for the physical economy.
+                  </h1>
+                  <p className="font-body-default text-base sm:text-lg text-on-surface-variant leading-relaxed max-w-3xl">
+                    <strong className="text-on-surface font-semibold">The Quantum Primes</strong> is an advanced industrial intelligence and operations research company. We build mathematical optimization engines, multi-plant supply chain architectures, and autonomous manufacturing agents that eliminate guesswork from production floors.
+                  </p>
+                  <p className="font-body-default text-sm sm:text-base text-on-surface-variant leading-relaxed max-w-3xl">
+                    Our mission is to replace heuristic schedule fiction and fragile spreadsheets with provably optimal, constraint-satisfying ground truth. Our flagship product—the <strong>Cadence Production Scheduler</strong>—is an enterprise APS engine that turns real factory capacity into executable shop-floor schedules.
+                  </p>
+
+                  <div className="flex flex-wrap items-center gap-4 pt-2">
+                    <Link
+                      href="/contact"
+                      className="h-11 px-6 bg-primary hover:bg-primary-container text-white font-medium text-sm rounded-xl flex items-center justify-center gap-2 transition-all shadow-md hover:shadow-lg active:scale-95"
+                    >
+                      <span>Contact The Quantum Primes</span>
+                      <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                    </Link>
+                    <a
+                      href="#flagship-product"
+                      className="h-11 px-6 bg-surface-container hover:bg-surface-container-high text-on-surface font-medium text-sm rounded-xl flex items-center gap-2 transition-all border border-outline-variant/40"
+                    >
+                      <span className="material-symbols-outlined text-[18px] text-primary">view_timeline</span>
+                      <span>Explore Our Flagship Scheduler</span>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Company System Card */}
+                <div className="lg:col-span-4 bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/50 shadow-md flex flex-col gap-4">
+                  <div className="flex items-center justify-between pb-3 border-b border-surface-container">
+                    <div className="flex items-center gap-2">
+                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                      <span className="font-eyebrow text-xs uppercase font-semibold text-on-surface">The Quantum Primes Stack</span>
+                    </div>
+                    <span className="text-[11px] font-tabular-mono-dense text-secondary font-medium">OPERATIONAL</span>
+                  </div>
+
+                  <div className="space-y-3 text-xs">
+                    <div className="p-2.5 bg-surface-container-low rounded-lg">
+                      <div className="text-on-surface-variant font-medium">Core Engine</div>
+                      <div className="text-on-surface font-semibold text-sm">Google OR-Tools CP-SAT + MILP</div>
+                    </div>
+                    <div className="p-2.5 bg-surface-container-low rounded-lg">
+                      <div className="text-on-surface-variant font-medium">Flagship Product</div>
+                      <div className="text-on-surface font-semibold text-sm">Cadence APS (Production Scheduler)</div>
+                    </div>
+                    <div className="p-2.5 bg-surface-container-low rounded-lg">
+                      <div className="text-on-surface-variant font-medium">Enterprise Integration</div>
+                      <div className="text-on-surface font-semibold text-sm">ERP (SAP, Oracle, NetSuite) &amp; MES</div>
+                    </div>
+                    <div className="p-2.5 bg-surface-container-low rounded-lg">
+                      <div className="text-on-surface-variant font-medium">Corporate Headquarters</div>
+                      <div className="text-on-surface font-semibold text-sm">contact: thequantumprimes@gmail.com</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Company Metrics */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
+                <div className="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/40">
+                  <div className="text-xs uppercase text-on-surface-variant font-semibold tracking-wider">CP-SAT Core</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-on-surface mt-1">&lt; 45s</div>
+                  <div className="text-xs text-on-surface-variant mt-1">Full 3-month factory solve</div>
+                </div>
+                <div className="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/40">
+                  <div className="text-xs uppercase text-on-surface-variant font-semibold tracking-wider">Inventory Drop</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-primary mt-1">15%</div>
+                  <div className="text-xs text-on-surface-variant mt-1">Average WIP &amp; buffer reduction</div>
+                </div>
+                <div className="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/40">
+                  <div className="text-xs uppercase text-on-surface-variant font-semibold tracking-wider">Labor Cost Savings</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-secondary mt-1">10%</div>
+                  <div className="text-xs text-on-surface-variant mt-1">Optimized shift overtime &amp; changeover</div>
+                </div>
+                <div className="bg-surface-container-lowest p-5 rounded-2xl border border-outline-variant/40">
+                  <div className="text-xs uppercase text-on-surface-variant font-semibold tracking-wider">Capacity Boost</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-on-surface mt-1">+12%</div>
+                  <div className="text-xs text-on-surface-variant mt-1">OEE &amp; throughput gain</div>
+                </div>
+              </div>
             </div>
-</div>
-<div className="flex flex-col gap-1">
-<h3 className="font-title-md text-title-md text-on-surface font-semibold">Marcus Sterling</h3>
-<span className="font-eyebrow text-eyebrow text-primary uppercase">Co-Founder &amp; CEO</span>
-<p className="font-body-dense text-body-dense text-on-surface-variant pt-2 leading-normal">
-              Former VP of Global Manufacturing Engineering at Fortune 50 CPG. Directed 18 years of operations across high-speed packaging, aseptic lines, and high-mix beverage facilities.
-            </p>
-</div>
-<div className="mt-auto pt-space-xs flex items-center gap-1.5 text-outline text-eyebrow font-eyebrow">
-<span className="material-symbols-outlined text-[14px]">factory</span>
-<span>Ex-Global VP Ops</span>
-</div>
-</div>
-{/* Dr. Aris Thorne */}
-<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md group hover:bg-surface-container-low transition-colors">
-<div className="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container">
-<img className="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-300" alt="Dr. Aris Thorne, Head of Industrial Systems" src="/images/avatar-david.jpg" loading="lazy" />
-<div className="absolute bottom-2 left-2 bg-inverse-surface/85 backdrop-blur-sm text-inverse-on-surface font-eyebrow text-eyebrow px-2 py-0.5 rounded">
-              EX-SIEMENS
+          </section>
+
+          {/* SECTION: WHAT THE QUANTUM PRIMES DOES */}
+          <section className="w-full py-16 bg-surface-container-low border-t border-outline-variant/30">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="max-w-3xl mb-12">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-primary/10 text-primary font-eyebrow text-xs uppercase font-medium mb-3">
+                  COMPANY SCOPE &amp; CAPABILITIES
+                </div>
+                <h2 className="text-2xl sm:text-4xl font-bold text-on-surface tracking-tight">
+                  What The Quantum Primes builds for modern industry.
+                </h2>
+                <p className="text-base text-on-surface-variant mt-3 leading-relaxed">
+                  We bridge the divide between theoretical operations research and dirty-boots shop floor reality. Our solutions span the entire manufacturing lifecycle:
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Pillar 1: SIOP */}
+                <div className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 flex flex-col justify-between">
+                  <div>
+                    <div className="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center mb-4">
+                      <span className="material-symbols-outlined text-2xl">monitoring</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-on-surface mb-2">
+                      1. Sales, Inventory &amp; Operations Planning (SIOP)
+                    </h3>
+                    <p className="text-sm text-on-surface-variant leading-relaxed">
+                      Aligning long-range executive forecasts with multi-plant S&amp;OE execution in a single unified model. We eliminate distributor channel distortion, evaluate subcontractor capacity limits, and promise reliable customer ship dates from real capacity.
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-surface-container text-xs font-semibold text-primary">
+                    Strategic Demand &amp; Supply Balancing →
+                  </div>
+                </div>
+
+                {/* Pillar 2: APS Flagship */}
+                <div className="bg-surface-container-lowest p-6 rounded-2xl border border-primary/30 ring-1 ring-primary/20 flex flex-col justify-between relative shadow-sm">
+                  <div className="absolute -top-3 right-4 px-2 py-0.5 rounded bg-primary text-white text-[10px] font-bold uppercase tracking-wider">
+                    FLAGSHIP PRODUCT
+                  </div>
+                  <div>
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
+                      <span className="material-symbols-outlined text-2xl">schedule</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-on-surface mb-2">
+                      2. Advanced Planning &amp; Scheduling (APS)
+                    </h3>
+                    <p className="text-sm text-on-surface-variant leading-relaxed">
+                      Our core production scheduler software. Solves combinatorial job-shop scheduling, shift patterns, cleanout matrices, tool qualifications, and multi-stage routing trees in sub-second to 45-second CPU runs with mathematical optimality.
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-surface-container text-xs font-semibold text-primary">
+                    Finite Capacity CP-SAT Solver →
+                  </div>
+                </div>
+
+                {/* Pillar 3: MES & AI */}
+                <div className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 flex flex-col justify-between">
+                  <div>
+                    <div className="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-600 flex items-center justify-center mb-4">
+                      <span className="material-symbols-outlined text-2xl">precision_manufacturing</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-on-surface mb-2">
+                      3. MES Execution &amp; Industrial Agent AI
+                    </h3>
+                    <p className="text-sm text-on-surface-variant leading-relaxed">
+                      Real-time closed-loop execution. Traceability across WIP, machine dispatch, IATF 16949 / FDA compliance, and agentic AI ReAct loops (Observe, Reason, Act, Learn) with plain-language queries and operator-in-the-loop governance.
+                    </p>
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-surface-container text-xs font-semibold text-purple-600">
+                    Live Telemetry &amp; Agentic Action →
+                  </div>
+                </div>
+              </div>
             </div>
-</div>
-<div className="flex flex-col gap-1">
-<h3 className="font-title-md text-title-md text-on-surface font-semibold">Dr. Aris Thorne</h3>
-<span className="font-eyebrow text-eyebrow text-primary uppercase">Head of Industrial Systems</span>
-<p className="font-body-dense text-body-dense text-on-surface-variant pt-2 leading-normal">
-              Former Lead Automation Architect at Siemens Industrial Software. Specialized in ISA-95 protocol bridges, edge telemetry ingestion, and real-time bidirectional MES synchronization.
-            </p>
-</div>
-<div className="mt-auto pt-space-xs flex items-center gap-1.5 text-outline text-eyebrow font-eyebrow">
-<span className="material-symbols-outlined text-[14px]">hub</span>
-<span>ISA-95 Committee</span>
-</div>
-</div>
-{/* Prof. Henrik Lindqvist */}
-<div className="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md group hover:bg-surface-container-low transition-colors">
-<div className="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container">
-<img className="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-300" alt="Prof. Henrik Lindqvist, Scientific Advisor" src="/images/avatar-sarah.jpg" loading="lazy" />
-<div className="absolute bottom-2 left-2 bg-inverse-surface/85 backdrop-blur-sm text-inverse-on-surface font-eyebrow text-eyebrow px-2 py-0.5 rounded">
-              ETH ZÜRICH
+          </section>
+
+          {/* SECTION: FLAGSHIP PRODUCT DEEP DIVE (C:\Users\Hp\OneDrive\Desktop 2\scheduler\scheduler-demo) */}
+          <section id="flagship-product" className="w-full py-16 bg-surface border-t border-outline-variant/30">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="p-8 sm:p-12 rounded-3xl bg-[#0E131A] text-[#F0F4F8] border border-[#202938] shadow-2xl">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                  <div className="lg:col-span-7 flex flex-col gap-5">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1E293B] text-[#38BDF8] text-xs font-semibold uppercase tracking-wider w-fit">
+                      <span className="w-2 h-2 rounded-full bg-[#38BDF8] animate-pulse"></span>
+                      FLAGSHIP PRODUCT ARCHITECTURE
+                    </div>
+                    <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white leading-tight">
+                      The Cadence Production Scheduler
+                    </h2>
+                    <p className="text-sm sm:text-base text-[#94A3B8] leading-relaxed">
+                      Designed, engineered, and maintained by <strong className="text-white">The Quantum Primes</strong>. This system is a high-performance finite capacity FMCG and discrete manufacturing scheduler built on:
+                    </p>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                      <div className="p-3.5 bg-[#161C26] rounded-xl border border-[#202938]">
+                        <div className="text-[#38BDF8] font-bold text-sm mb-1">Backend Engine</div>
+                        <div className="text-[#CBD5E1]">Django 6.1 + DRF + Google OR-Tools CP-SAT</div>
+                        <div className="text-[#64748B] mt-1">Port 8000 • Multi-threaded branch-and-bound</div>
+                      </div>
+                      <div className="p-3.5 bg-[#161C26] rounded-xl border border-[#202938]">
+                        <div className="text-[#3ECF8E] font-bold text-sm mb-1">Interactive Frontend</div>
+                        <div className="text-[#CBD5E1]">React 19 + React Router 7 + Vite + Tailwind</div>
+                        <div className="text-[#64748B] mt-1">Port 5173 • High-density interactive Gantt</div>
+                      </div>
+                      <div className="p-3.5 bg-[#161C26] rounded-xl border border-[#202938]">
+                        <div className="text-[#F59E0B] font-bold text-sm mb-1">Multi-Plant Routing</div>
+                        <div className="text-[#CBD5E1]">Support for plant trees &amp; master factories</div>
+                        <div className="text-[#64748B] mt-1">Multi-stage dependency links &amp; shift shading</div>
+                      </div>
+                      <div className="p-3.5 bg-[#161C26] rounded-xl border border-[#202938]">
+                        <div className="text-[#A855F7] font-bold text-sm mb-1">Test Validation</div>
+                        <div className="text-[#CBD5E1]">286 automated backend tests + 11 vitest</div>
+                        <div className="text-[#64748B] mt-1">Zero regressions, 100% deterministic</div>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-wrap items-center gap-4 pt-2">
+                      <a
+                        href="http://localhost:5173"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="h-11 px-6 bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-medium text-sm rounded-xl flex items-center gap-2 transition-all shadow-md active:scale-95"
+                      >
+                        <span className="material-symbols-outlined text-[18px]">launch</span>
+                        <span>Launch Scheduler Demo (localhost:5173)</span>
+                      </a>
+                      <Link
+                        href="/contact"
+                        className="h-11 px-6 bg-[#1F2937] hover:bg-[#374151] text-white font-medium text-sm rounded-xl flex items-center gap-2 transition-all border border-[#374151]"
+                      >
+                        <span>Schedule Technical Deep-Dive</span>
+                        <span className="material-symbols-outlined text-[16px]">mail</span>
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Right Column: Execution Metrics */}
+                  <div className="lg:col-span-5 bg-[#161C26] p-6 rounded-2xl border border-[#202938] flex flex-col gap-4">
+                    <div className="flex items-center justify-between pb-3 border-b border-[#202938]">
+                      <span className="text-xs uppercase tracking-wider font-semibold text-[#94A3B8]">
+                        Solver Horizon Benchmarks
+                      </span>
+                      <span className="text-xs text-[#3ECF8E] font-mono">CP-SAT 4-Core</span>
+                    </div>
+
+                    <div className="space-y-3 font-mono text-xs">
+                      <div className="flex justify-between items-center p-2.5 bg-[#0E131A] rounded-lg">
+                        <span className="text-[#E2E8F0]">1 Month Horizon</span>
+                        <span className="text-[#3ECF8E]">594 tasks • ~42s (Optimal)</span>
+                      </div>
+                      <div className="flex justify-between items-center p-2.5 bg-[#0E131A] rounded-lg">
+                        <span className="text-[#E2E8F0]">2 Months Horizon</span>
+                        <span className="text-[#3ECF8E]">1,188 tasks • ~45s (Optimal)</span>
+                      </div>
+                      <div className="flex justify-between items-center p-2.5 bg-[#0E131A] rounded-lg">
+                        <span className="text-[#E2E8F0]">3 Months Horizon</span>
+                        <span className="text-[#3ECF8E]">1,782 tasks • ~48s (Optimal)</span>
+                      </div>
+                      <div className="flex justify-between items-center p-2.5 bg-[#0E131A] rounded-lg">
+                        <span className="text-[#E2E8F0]">6 Months Horizon</span>
+                        <span className="text-[#F59E0B]">3,564 tasks • Capped</span>
+                      </div>
+                    </div>
+
+                    <div className="pt-2 text-xs text-[#94A3B8] leading-relaxed border-t border-[#202938]">
+                      <strong className="text-white">Instant Plan Reload (⚡):</strong> Once solved, schedules reload in 0ms without re-solving. Planners can compress idle gaps, anchor to the next whole hour, or export complete multi-sheet workbooks.
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-</div>
-<div className="flex flex-col gap-1">
-<h3 className="font-title-md text-title-md text-on-surface font-semibold">Prof. Henrik Lindqvist</h3>
-<span className="font-eyebrow text-eyebrow text-primary uppercase">Scientific Advisor</span>
-<p className="font-body-dense text-body-dense text-on-surface-variant pt-2 leading-normal">
-              Chair of Combinatorial Optimization at ETH Zürich. Recipient of the Beale-Orchard-Hays Prize for Excellence in Computational Mathematical Programming.
-            </p>
-</div>
-<div className="mt-auto pt-space-xs flex items-center gap-1.5 text-outline text-eyebrow font-eyebrow">
-<span className="material-symbols-outlined text-[14px]">military_tech</span>
-<span>Beale-Orchard-Hays Prize</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-{/* Industrial Pedigree & Backed by Global Leaders */}
-<section className="w-full px-margin py-16 sm:py-20 bg-surface-container-low">
-<div className="max-w-7xl mx-auto flex flex-col gap-space-lg">
-<div className="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm border-b border-outline-variant/60">
-<span className="font-eyebrow text-eyebrow uppercase text-on-surface-variant font-medium tracking-wider">
-          BACKED BY PREMIER INDUSTRIAL DEEP-TECH VENTURES &amp; MANUFACTURING OPERATORS
-        </span>
-<span className="font-tabular-mono-dense text-tabular-mono-dense text-primary font-medium">SERIES A // $32M TOTAL CAPITAL</span>
-</div>
-{/* Investors & Industrial Partners Strip */}
-<div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-space-md items-center text-center">
-<div className="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col items-center justify-center">
-<span className="font-title-md text-title-md font-bold tracking-tight text-on-surface">FOUNDRY</span>
-<span className="font-eyebrow text-eyebrow text-on-surface-variant">Capital</span>
-</div>
-<div className="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col items-center justify-center">
-<span className="font-title-md text-title-md font-bold tracking-tight text-on-surface">INDUSTRIAL</span>
-<span className="font-eyebrow text-eyebrow text-on-surface-variant">Ventures EU</span>
-</div>
-<div className="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col items-center justify-center">
-<span className="font-title-md text-title-md font-bold tracking-tight text-on-surface">ECLIPSE</span>
-<span className="font-eyebrow text-eyebrow text-on-surface-variant">Physical Economy</span>
-</div>
-<div className="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col items-center justify-center">
-<span className="font-title-md text-title-md font-bold tracking-tight text-on-surface">SCALE-TECH</span>
-<span className="font-eyebrow text-eyebrow text-on-surface-variant">Manufacturing Fund</span>
-</div>
-<div className="col-span-2 md:col-span-4 lg:col-span-1 p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col items-center justify-center">
-<span className="font-title-md text-title-md font-bold tracking-tight text-primary">OPERATOR</span>
-<span className="font-eyebrow text-eyebrow text-on-surface-variant">Syndicate Angels</span>
-</div>
-</div>
-</div>
-</section>
-{/* Factory Visit & Plant Immersion Culture */}
-<section className="w-full px-margin py-16 bg-surface">
-<div className="max-w-7xl mx-auto flex flex-col gap-space-xl">
-<div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
-<div className="lg:col-span-6 flex flex-col gap-space-md">
-<span className="font-eyebrow text-eyebrow uppercase text-primary tracking-widest font-semibold">
-            ENGINEERING METHODOLOGY // GROUND-TRUTH EMPIRICISM
-          </span>
-<h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight leading-tight">
-            Built on the factory floor, not in an ivory tower
-          </h2>
-<p className="font-body-default text-body-default text-on-surface-variant leading-relaxed">
-            Our optimization scientists and software engineers spend a mandatory minimum of <strong>two weeks per quarter</strong> wearing steel-toed boots in customer facilities. We stand beside line operators, observe manual changeover handoffs, audit dirty SCADA telemetry logs, and analyze cold clean-in-place cycles before writing a single line of solver logic.
-          </p>
-<div className="flex flex-col gap-space-sm pt-space-xs font-body-dense text-body-dense text-on-surface">
-<div className="flex items-center gap-space-sm">
-<span className="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
-<span>Direct operator shadow sessions on live packaging &amp; formulation runs</span>
-</div>
-<div className="flex items-center gap-space-sm">
-<span className="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
-<span>Sensor drift reconciliation across legacy Rockwell &amp; Siemens PLCs</span>
-</div>
-<div className="flex items-center gap-space-sm">
-<span className="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
-<span>Shop-floor dispatch usability validation under noisy, high-pressure shift change</span>
-</div>
-</div>
-</div>
-{/* 3 Factory Badges / Photo Showcase */}
-<div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-space-md">
-{/* Plant 1: Chicago */}
-<div className="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
-<div className="h-44 w-full relative bg-surface-container">
-<img className="w-full h-full object-cover" alt="Industrial beverage canning facility in Chicago" src="/images/case-tetrabio.jpg" loading="lazy" />
-<span className="absolute top-2 right-2 bg-surface/90 backdrop-blur-sm text-on-surface font-eyebrow text-eyebrow px-2 py-0.5 rounded font-medium">
-                USA
-              </span>
-</div>
-<div className="p-space-md flex flex-col gap-1">
-<span className="font-title-md text-title-md text-on-surface font-semibold">Chicago, IL</span>
-<span className="font-eyebrow text-eyebrow text-on-surface-variant uppercase">Aseptic Beverage Plant</span>
-<p className="font-tabular-mono-dense text-tabular-mono-dense text-secondary pt-1">4 Lines // 1,400 cans/min</p>
-</div>
-</div>
-{/* Plant 2: Basel */}
-<div className="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
-<div className="h-44 w-full relative bg-surface-container">
-<img className="w-full h-full object-cover" alt="Pharmaceutical cleanroom sterile production line in Basel" src="/images/industry-pharma.jpg" loading="lazy" />
-<span className="absolute top-2 right-2 bg-surface/90 backdrop-blur-sm text-on-surface font-eyebrow text-eyebrow px-2 py-0.5 rounded font-medium">
-                SUI
-              </span>
-</div>
-<div className="p-space-md flex flex-col gap-1">
-<span className="font-title-md text-title-md text-on-surface font-semibold">Basel, CH</span>
-<span className="font-eyebrow text-eyebrow text-on-surface-variant uppercase">Sterile Bio-Formulation</span>
-<p className="font-tabular-mono-dense text-tabular-mono-dense text-secondary pt-1">GMP Class A/B Cleanroom</p>
-</div>
-</div>
-{/* Plant 3: Munich */}
-<div className="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm flex flex-col">
-<div className="h-44 w-full relative bg-surface-container">
-<img className="w-full h-full object-cover" alt="Precision manufacturing and converting facility in Munich" src="/images/industry-converting.jpg" loading="lazy" />
-<span className="absolute top-2 right-2 bg-surface/90 backdrop-blur-sm text-on-surface font-eyebrow text-eyebrow px-2 py-0.5 rounded font-medium">
-                GER
-              </span>
-</div>
-<div className="p-space-md flex flex-col gap-1">
-<span className="font-title-md text-title-md text-on-surface font-semibold">Munich, DE</span>
-<span className="font-eyebrow text-eyebrow text-on-surface-variant uppercase">Precision Converting</span>
-<p className="font-tabular-mono-dense text-tabular-mono-dense text-secondary pt-1">Multi-Tier Disjunctive Cut</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-{/* Careers / Open Engineering Roles */}
-<section className="w-full px-margin py-16 bg-surface-container-low">
-<div className="max-w-7xl mx-auto flex flex-col gap-space-xl">
-<div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
-<div className="max-w-2xl flex flex-col gap-space-xs">
-<span className="font-eyebrow text-eyebrow uppercase text-primary tracking-widest font-semibold">
-            OPEN ROLES // JOIN THE OPERATIONS RESEARCH KERNEL TEAM
-          </span>
-<h2 className="font-headline-lg text-headline-lg text-on-surface tracking-tight">
-            Solve computationally hard industrial problems
-          </h2>
-</div>
-<span className="font-tabular-mono-dense text-tabular-mono-dense text-on-surface-variant">
-          Kernel written in modern C++20, Rust, and WebGL
-        </span>
-</div>
-{/* Roles Stack */}
-<div className="flex flex-col gap-space-md">
-{/* Role 1 */}
-<div className="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface hover:shadow-md transition-all">
-<div className="flex flex-col gap-space-xs">
-<div className="flex items-center gap-space-sm flex-wrap">
-<span className="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-eyebrow text-eyebrow uppercase">OR Kernel</span>
-<span className="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-tabular-mono-dense text-tabular-mono-dense">C++20 / CP-SAT</span>
-<span className="font-eyebrow text-eyebrow text-secondary">FULL-TIME</span>
-</div>
-<h3 className="font-title-lg text-title-lg text-on-surface font-semibold">
-              Staff Combinatorial Optimization Engineer
-            </h3>
-<p className="font-body-dense text-body-dense text-on-surface-variant max-w-3xl">
-              Design cutting planes, domain-specific propagator heuristics, and primal decompositions for high-cardinality disjunctive sequencing on industrial packaging lines.
-            </p>
-</div>
-<div className="flex items-center gap-space-md flex-shrink-0">
-<div className="flex flex-col md:text-right">
-<span className="font-eyebrow text-eyebrow uppercase text-on-surface">San Francisco / Remote</span>
-<span className="font-tabular-mono-dense text-tabular-mono-dense text-on-surface-variant">$220K - $280K • 0.35% - 0.70%</span>
-</div>
-<a className="h-9 px-space-md bg-surface-container text-on-surface hover:bg-primary hover:text-on-primary font-body-dense text-body-dense rounded flex items-center justify-center transition-colors font-medium" href="#">
-              Apply
-            </a>
-</div>
-</div>
-{/* Role 2 */}
-<div className="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface hover:shadow-md transition-all">
-<div className="flex flex-col gap-space-xs">
-<div className="flex items-center gap-space-sm flex-wrap">
-<span className="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-eyebrow text-eyebrow uppercase">Plant Edge</span>
-<span className="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-tabular-mono-dense text-tabular-mono-dense">SAP S/4HANA / OPC-UA</span>
-<span className="font-eyebrow text-eyebrow text-secondary">FULL-TIME</span>
-</div>
-<h3 className="font-title-lg text-title-lg text-on-surface font-semibold">
-              Lead Industrial Integration Architect
-            </h3>
-<p className="font-body-dense text-body-dense text-on-surface-variant max-w-3xl">
-              Build zero-latency bi-directional bridges between customer ERPs (SAP S/4HANA, PP-DS), plant-floor MES solutions, and our local edge solver daemons.
-            </p>
-</div>
-<div className="flex items-center gap-space-md flex-shrink-0">
-<div className="flex flex-col md:text-right">
-<span className="font-eyebrow text-eyebrow uppercase text-on-surface">Zürich / Remote</span>
-<span className="font-tabular-mono-dense text-tabular-mono-dense text-on-surface-variant">190K CHF - 240K CHF • Equity</span>
-</div>
-<a className="h-9 px-space-md bg-surface-container text-on-surface hover:bg-primary hover:text-on-primary font-body-dense text-body-dense rounded flex items-center justify-center transition-colors font-medium" href="#">
-              Apply
-            </a>
-</div>
-</div>
-{/* Role 3 */}
-<div className="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md hover:bg-surface hover:shadow-md transition-all">
-<div className="flex flex-col gap-space-xs">
-<div className="flex items-center gap-space-sm flex-wrap">
-<span className="px-space-xs py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-eyebrow text-eyebrow uppercase">Visual Systems</span>
-<span className="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-tabular-mono-dense text-tabular-mono-dense">Canvas API / Web Workers</span>
-<span className="font-eyebrow text-eyebrow text-secondary">FULL-TIME</span>
-</div>
-<h3 className="font-title-lg text-title-lg text-on-surface font-semibold">
-              Senior Frontend Systems Engineer (Gantt Engine)
-            </h3>
-<p className="font-body-dense text-body-dense text-on-surface-variant max-w-3xl">
-              Architect our 60fps virtualization engine capable of rendering 50,000+ interactive job blocks, real-time buffer lines, and live drag-and-drop MILP re-computation.
-            </p>
-</div>
-<div className="flex items-center gap-space-md flex-shrink-0">
-<div className="flex flex-col md:text-right">
-<span className="font-eyebrow text-eyebrow uppercase text-on-surface">Remote (Worldwide)</span>
-<span className="font-tabular-mono-dense text-tabular-mono-dense text-on-surface-variant">$180K - $230K • 0.20% - 0.45%</span>
-</div>
-<a className="h-9 px-space-md bg-surface-container text-on-surface hover:bg-primary hover:text-on-primary font-body-dense text-body-dense rounded flex items-center justify-center transition-colors font-medium" href="#">
-              Apply
-            </a>
-</div>
-</div>
-</div>
-</div>
-</section>
-{/* Bottom CTA: Technical Exchange with Research Team */}
-<section className="w-full px-margin py-20 bg-surface">
-<div className="max-w-7xl mx-auto">
-<div className="relative rounded-2xl bg-inverse-surface text-inverse-on-surface p-space-xl lg:p-16 overflow-hidden shadow-xl">
-{/* Subtle technical grid background effect */}
-<div className="absolute inset-0 opacity-10 pointer-events-none bg-gradient-to-r from-primary via-transparent to-primary"></div>
-<div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-space-xl">
-<div className="max-w-2xl flex flex-col gap-space-md">
-<div className="inline-flex items-center gap-2 font-eyebrow text-eyebrow uppercase tracking-widest text-inverse-primary">
-<span className="w-2 h-2 rounded-full bg-secondary"></span>
-              PEER-LEVEL OPERATIONS RESEARCH ADVISORY
+          </section>
+
+          {/* SECTION: COMPANY ETHOS & CONTACT CTA */}
+          <section className="w-full py-16 bg-surface-container-low border-t border-outline-variant/40">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center gap-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-primary/10 text-primary font-eyebrow text-xs uppercase font-medium">
+                PARTNER WITH US
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-on-surface tracking-tight">
+                Ready to transform your plant operations?
+              </h2>
+              <p className="text-base text-on-surface-variant leading-relaxed max-w-2xl">
+                Whether you need to schedule a high-speed packaging facility, coordinate multi-plant supply chains, or deploy custom operations research algorithms, <strong className="text-on-surface">The Quantum Primes</strong> team is here to assist.
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="h-12 px-8 bg-primary hover:bg-primary-container text-white font-medium text-sm rounded-xl flex items-center gap-2 transition-all shadow-md hover:shadow-lg active:scale-95"
+                >
+                  <span>Contact Our Team</span>
+                  <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </Link>
+                <a
+                  href="mailto:thequantumprimes@gmail.com"
+                  className="h-12 px-8 bg-surface-container hover:bg-surface-container-high text-on-surface font-medium text-sm rounded-xl flex items-center gap-2 transition-all border border-outline-variant/40"
+                >
+                  <span className="material-symbols-outlined text-[18px] text-primary">mail</span>
+                  <span>thequantumprimes@gmail.com</span>
+                </a>
+              </div>
             </div>
-<h2 className="font-display text-headline-lg lg:text-headline-lg font-bold tracking-tight text-inverse-on-surface">
-              Schedule a Technical Exchange with Our Research Team
-            </h2>
-<p className="font-body-default text-title-md text-outline-variant leading-relaxed">
-              No sales slide decks. Meet directly with our operations research scientists and systems engineers to formulate your plant's hardest bottleneck constraints into mathematical models.
-            </p>
-</div>
-<div className="flex flex-col sm:flex-row lg:flex-col gap-space-md flex-shrink-0">
-<a className="h-12 px-space-xl bg-primary-container hover:bg-primary text-on-primary font-body-default text-body-default rounded-lg flex items-center justify-center transition-colors font-medium shadow-sm" href="/book-a-demo">
-<span className="material-symbols-outlined text-[20px] mr-2">calculate</span>
-              Request Technical Exchange
-            </a>
-<a className="h-12 px-space-xl bg-surface-container-high/20 hover:bg-surface-container-high/30 text-inverse-on-surface font-body-default text-body-default rounded-lg flex items-center justify-center transition-colors font-medium" href="/case-studies">
-<span className="material-symbols-outlined text-[20px] mr-2">description</span>
-              Read Our Published Papers (.pdf)
-            </a>
-</div>
-</div>
-</div>
-</div>
-</section>
-</div>
+          </section>
+        </div>
       </main>
 
       <CadenceFooter />

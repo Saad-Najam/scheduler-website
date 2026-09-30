@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ThemeProvider } from '@/context/ThemeContext';
+import ChatbotAssistant from '@/components/ChatbotAssistant';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Cadence — Enterprise Production Scheduling & Capacity Planning Platform',
-    template: '%s | Cadence APS',
+    default: 'The Quantum Primes — Enterprise Production Scheduling & Industrial AI',
+    template: '%s | The Quantum Primes',
   },
-  description: "Constraint-based production scheduling that turns your factory's real capacity into a plan you can actually run. Sub-second CP-SAT optimization and finite capacity Gantt scheduling.",
+  description: "Advanced Planning & Scheduling (APS) and industrial optimization platform by The Quantum Primes. Google OR-Tools CP-SAT finite capacity scheduling, SIOP, MES integration, and buildable factory plans.",
   icons: {
     icon: '/icon.svg',
     shortcut: '/icon.svg',
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-surface font-body-default text-body-default text-on-surface antialiased transition-colors duration-200 min-h-screen">
         <ThemeProvider>
           {children}
+          <ChatbotAssistant />
         </ThemeProvider>
       </body>
     </html>

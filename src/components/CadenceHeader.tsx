@@ -43,9 +43,10 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
           <Link href="/" className="flex items-center gap-2 group">
             <CadenceLogo className="h-7 w-auto transition-transform duration-200 group-hover:scale-[1.02]" />
           </Link>
-          <span className="hidden xl:inline-flex items-center font-eyebrow text-[10px] tracking-wider uppercase px-2 py-0.5 rounded bg-surface-container text-on-surface-variant border border-outline-variant/40">
-            APS v2.4
-          </span>
+          <div className="hidden sm:flex flex-col">
+            <span className="text-[10px] uppercase font-bold tracking-wider text-primary">The Quantum Primes</span>
+            <span className="text-[10px] text-on-surface-variant font-mono">APS Engine v2.4</span>
+          </div>
         </div>
 
         {/* Desktop Navigation - Clean, perfectly spaced & uncrowded */}
@@ -185,6 +186,17 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
           </div>
 
           <Link
+            href="/contact"
+            className={`transition-colors py-2 text-[14px] font-medium ${
+              isActive('/contact')
+                ? 'text-primary'
+                : 'text-on-surface-variant hover:text-on-surface'
+            }`}
+          >
+            Contact
+          </Link>
+
+          <Link
             href="/roi-calculator"
             className={`transition-colors py-2 text-[14px] font-medium ${
               isActive('/roi-calculator')
@@ -194,7 +206,6 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
           >
             ROI Calculator
           </Link>
-
 
           <Link
             href="/case-studies"
@@ -212,7 +223,7 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
             <button
               type="button"
               className={`transition-colors py-2 flex items-center gap-1 text-[14px] font-medium ${
-                isActive('/docs') || isActive('/integrations') || isActive('/security') || isActive('/company')
+                isActive('/docs') || isActive('/integrations') || isActive('/security')
                   ? 'text-primary'
                   : 'text-on-surface-variant hover:text-on-surface'
               }`}
@@ -292,7 +303,7 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
 
           {/* Launch Application Bridge */}
           <a
-            href="http://localhost:3000"
+            href="http://localhost:5173"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface font-medium text-[13px] px-3 py-1.5 transition-all border border-outline-variant/40 rounded-lg hover:bg-surface-container-low"
@@ -346,6 +357,14 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
             <span className="material-symbols-outlined text-[18px]">chevron_right</span>
           </Link>
           <Link
+            href="/contact"
+            onClick={() => setMobileMenuOpen(false)}
+            className="py-2 text-on-surface hover:text-primary font-medium transition-colors flex items-center justify-between"
+          >
+            <span>Contact Us</span>
+            <span className="material-symbols-outlined text-[18px]">chevron_right</span>
+          </Link>
+          <Link
             href="/products"
             onClick={() => setMobileMenuOpen(false)}
             className="py-2 text-on-surface hover:text-primary font-medium transition-colors flex items-center justify-between"
@@ -377,7 +396,6 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
             <span>ROI Calculator</span>
             <span className="material-symbols-outlined text-[18px]">chevron_right</span>
           </Link>
-
           <Link
             href="/case-studies"
             onClick={() => setMobileMenuOpen(false)}
@@ -410,30 +428,22 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
             <span>Developer Docs & API</span>
             <span className="material-symbols-outlined text-[18px]">chevron_right</span>
           </Link>
-          <Link
-            href="/company"
-            onClick={() => setMobileMenuOpen(false)}
-            className="py-2 text-on-surface hover:text-primary font-medium transition-colors flex items-center justify-between"
-          >
-            <span>Company & Philosophy</span>
-            <span className="material-symbols-outlined text-[18px]">chevron_right</span>
-          </Link>
           <div className="pt-3 border-t border-outline-variant flex flex-col gap-2.5">
             <a
-              href="http://localhost:3000"
+              href="http://localhost:5173"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-2.5 px-4 text-center rounded-lg border border-outline-variant text-on-surface font-medium flex items-center justify-center gap-2"
             >
               <span className="material-symbols-outlined text-[18px] text-primary">launch</span>
-              Launch Scheduler App (localhost:3000)
+              Launch Scheduler App (localhost:5173)
             </a>
             <Link
-              href="/book-a-demo"
+              href="/contact"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full py-2.5 px-4 text-center rounded-lg bg-primary text-white font-medium shadow-sm"
             >
-              Book a 30-Min Technical Demo
+              Contact The Quantum Primes
             </Link>
           </div>
         </div>

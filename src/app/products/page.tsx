@@ -106,7 +106,7 @@ export default function ProductsPage() {
               <div className="flex flex-col gap-4 max-w-3xl">
                 <div className="inline-flex items-center gap-2 self-start px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-mono text-xs uppercase tracking-wider font-semibold">
                   <span className="w-2 h-2 rounded-full bg-secondary inline-block animate-pulse"></span>
-                  <span>Product Architecture Specification · Cadence APS v2.4</span>
+                  <span>The Quantum Primes · Cadence APS Architecture Specification</span>
                 </div>
 
                 <h1 className="font-display font-bold text-3xl sm:text-5xl lg:text-6xl text-on-surface tracking-tight leading-[1.1]">
@@ -114,27 +114,26 @@ export default function ProductsPage() {
                 </h1>
 
                 <p className="text-base sm:text-lg text-on-surface-variant leading-relaxed">
-                  Cadence combines Google OR-Tools CP-SAT discrete optimization, sub-second shop-floor telemetry streaming, and bi-directional ERP integration to turn plant capacity into mathematically feasible dispatches.
+                  Cadence is the flagship production scheduling product of <strong className="text-on-surface">The Quantum Primes</strong>. It combines Google OR-Tools CP-SAT discrete optimization, sub-second shop-floor telemetry streaming, and bi-directional ERP integration to turn plant capacity into mathematically feasible dispatches.
                 </p>
 
                 <div className="flex items-center gap-4 flex-wrap pt-2">
                   <a
-                    href="http://localhost:3000"
+                    href="http://localhost:5173"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="h-11 px-6 bg-primary hover:bg-primary-container text-white font-medium text-sm rounded-xl flex items-center justify-center gap-2 transition-all shadow-md hover:shadow-lg active:scale-95"
                   >
                     <span className="material-symbols-outlined text-[18px]">launch</span>
-                    <span>Launch Live Scheduler App</span>
+                    <span>Launch Local Scheduler (Port 5173)</span>
                   </a>
 
-                  <button
-                    type="button"
-                    onClick={() => setIsDemoModalOpen(true)}
+                  <Link
+                    href="/contact"
                     className="h-11 px-6 bg-surface-container hover:bg-surface-container-high text-on-surface font-medium text-sm rounded-xl flex items-center justify-center transition-all border border-outline-variant/40 active:scale-95"
                   >
-                    Book Technical Pilot
-                  </button>
+                    Contact The Quantum Primes
+                  </Link>
                 </div>
               </div>
             </FadeIn>
@@ -252,19 +251,23 @@ export default function ProductsPage() {
               Send us an anonymized work orders sample and line changeover matrix. We will return an optimal schedule comparison in 48 hours.
             </p>
             <div className="flex items-center gap-4 flex-wrap">
+              <Link
+                href="/contact"
+                className="h-11 px-6 bg-primary hover:bg-primary-container text-white font-medium text-sm rounded-xl flex items-center justify-center transition-all shadow-md active:scale-95"
+              >
+                Contact The Quantum Primes
+              </Link>
               <button
                 type="button"
                 onClick={() => setIsDemoModalOpen(true)}
-                className="h-11 px-6 bg-primary hover:bg-primary-container text-white font-medium text-sm rounded-xl flex items-center justify-center transition-all shadow-md active:scale-95"
+                className="h-11 px-6 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-medium text-sm rounded-xl flex items-center justify-center transition-all border border-outline-variant/50 active:scale-95"
               >
                 Request Technical Pilot
               </button>
-              <Link
-                href="/roi-calculator"
-                className="h-11 px-6 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-medium text-sm rounded-xl flex items-center justify-center transition-all border border-outline-variant/50 active:scale-95"
-              >
-                Calculate Plant ROI
-              </Link>
+            </div>
+            <div className="text-xs text-on-surface-variant flex items-center gap-1.5 mt-2">
+              <span className="material-symbols-outlined text-[15px] text-primary">mail</span>
+              <span>Direct inquiries: <strong>thequantumprimes@gmail.com</strong></span>
             </div>
           </div>
         </section>

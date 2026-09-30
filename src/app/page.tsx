@@ -35,34 +35,49 @@ export default function Page() {
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
 {/* Left Column (approx 40% width in 12-col = 5 cols) */}
 <div className="lg:col-span-5 flex flex-col gap-space-lg pt-2 lg:pt-6">
-<div className="inline-flex items-center gap-2">
-<span className="font-eyebrow text-eyebrow uppercase px-2 py-0.5 rounded bg-surface-container text-primary font-medium tracking-wider">
-              PRODUCTION SCHEDULING
-            </span>
-<span className="w-1.5 h-1.5 rounded-full bg-secondary inline-block"></span>
-<span className="font-tabular-mono-dense text-tabular-mono-dense text-on-surface-variant">CP-SAT ENGINE ACTIVE</span>
-</div>
-<h1 className="font-display text-display text-on-surface tracking-tight leading-[1.08] font-bold">
-            Your plant's real capacity, scheduled.
-          </h1>
-<p className="font-title-md text-title-md text-on-surface-variant leading-relaxed max-w-xl">
-            Constraint-based production scheduling that turns your factory's real capacity into a plan you can actually run.
-          </p>
-{/* CTA Row */}
-<div className="flex flex-wrap items-center gap-space-md pt-space-xs">
-<button type="button" onClick={() => setIsDemoModalOpen(true)} className="h-11 px-6 bg-primary hover:bg-primary-container text-white font-medium text-sm rounded-xl flex items-center justify-center transition-all shadow-md hover:shadow-lg active:scale-95">
-              Book a demo
-            </button>
-<a className="h-11 px-6 bg-surface-container hover:bg-surface-container-high text-on-surface font-medium text-sm rounded-xl flex items-center gap-2 transition-all border border-outline-variant/40 hover:bg-surface-container-high text-on-surface font-body-dense text-body-dense rounded flex items-center gap-2 font-medium transition-colors" href="#gantt-preview">
-<span>Explore interactive Gantt</span>
-<span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
-</div>
-{/* Trust Subline */}
-<div className="flex items-center gap-2 pt-2 text-on-surface-variant font-body-dense text-body-dense">
-<span className="material-symbols-outlined text-secondary text-[18px]">verified</span>
-<span>Trusted by plants running 40+ SKUs across 6 routing stages</span>
-</div>
+            <div className="inline-flex items-center gap-2">
+              <span className="font-eyebrow text-eyebrow uppercase px-2 py-0.5 rounded bg-surface-container text-primary font-medium tracking-wider">
+                THE QUANTUM PRIMES // APS PLATFORM
+              </span>
+              <span className="w-1.5 h-1.5 rounded-full bg-secondary inline-block"></span>
+              <span className="font-tabular-mono-dense text-tabular-mono-dense text-on-surface-variant">CP-SAT ENGINE ACTIVE</span>
+            </div>
+            <h1 className="font-display text-display text-on-surface tracking-tight leading-[1.08] font-bold">
+              Buildable plans. Schedules that hold when the plant changes.
+            </h1>
+            <p className="font-title-md text-title-md text-on-surface-variant leading-relaxed max-w-xl">
+              Advanced Planning and Scheduling built for the level of detail your plant actually runs on. Constraint-based mathematical optimization engineered by <strong className="text-on-surface">The Quantum Primes</strong>.
+            </p>
+            {/* CTA Row */}
+            <div className="flex flex-wrap items-center gap-space-md pt-space-xs">
+              <button
+                type="button"
+                onClick={() => setIsDemoModalOpen(true)}
+                className="h-11 px-6 bg-primary hover:bg-primary-container text-white font-medium text-sm rounded-xl flex items-center justify-center transition-all shadow-md hover:shadow-lg active:scale-95"
+              >
+                Book a demo
+              </button>
+              <a
+                href="http://localhost:5173"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-11 px-5 bg-surface-container hover:bg-surface-container-high text-on-surface font-medium text-sm rounded-xl flex items-center gap-2 transition-all border border-outline-variant/40"
+              >
+                <span className="material-symbols-outlined text-primary text-[18px]">launch</span>
+                <span>Launch Scheduler App</span>
+              </a>
+              <Link
+                href="/contact"
+                className="h-11 px-5 bg-surface-container hover:bg-surface-container-high text-on-surface font-medium text-sm rounded-xl flex items-center gap-2 transition-all border border-outline-variant/40"
+              >
+                <span>Contact Us</span>
+              </Link>
+            </div>
+            {/* Trust Subline */}
+            <div className="flex items-center gap-2 pt-2 text-on-surface-variant font-body-dense text-body-dense">
+              <span className="material-symbols-outlined text-secondary text-[18px]">verified</span>
+              <span>A product of The Quantum Primes • Solves 40+ SKUs across 6 routing stages</span>
+            </div>
 {/* High-Level Telemetry Micro-Shelf */}
 <div className="grid grid-cols-3 gap-space-sm pt-4 mt-2 bg-surface-container-low p-space-md rounded-xl">
 <div className="flex flex-col">
@@ -284,6 +299,105 @@ export default function Page() {
 </div>
 </div>
 </section>
+
+{/* SECTION 2.5: UNIFIED MANUFACTURING SUITE (PLAN • SCHEDULE • EXECUTE + AI) */}
+<section className="w-full py-20 bg-surface-container-low border-y border-outline-variant/30">
+  <div className="max-w-7xl mx-auto px-margin flex flex-col gap-space-xl">
+    <div className="max-w-3xl flex flex-col gap-2">
+      <span className="font-eyebrow text-eyebrow text-primary uppercase font-semibold">
+        The Unified Operating System
+      </span>
+      <h2 className="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+        Plan. Schedule. Execute. Unified in one mathematical model.
+      </h2>
+      <p className="font-body-default text-body-default text-on-surface-variant">
+        Bad-fit ERPs, legacy schedulers, and disconnected spreadsheets leave the last mile to manual guesswork. 
+        The Quantum Primes unites demand forecasting, finite-capacity constraint solving, and shop-floor execution in one closed loop.
+      </p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* PLAN */}
+      <div className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 flex flex-col justify-between">
+        <div>
+          <div className="text-xs uppercase font-bold tracking-widest text-blue-600 mb-2">01 / PLAN</div>
+          <h3 className="text-lg font-bold text-on-surface mb-2">
+            Sales, Inventory &amp; Operations Planning (SIOP)
+          </h3>
+          <p className="text-sm text-on-surface-variant leading-relaxed">
+            Aligning demand with supply through real-time multi-plant collaboration and intelligent decision support. 
+            Eliminate distributor inventory distortion and promise reliable delivery dates based on real capacity.
+          </p>
+        </div>
+        <Link href="/solutions" className="mt-4 pt-4 border-t border-surface-container text-xs font-semibold text-primary flex items-center gap-1">
+          Explore SIOP Capabilities →
+        </Link>
+      </div>
+
+      {/* SCHEDULE */}
+      <div className="bg-surface-container-lowest p-6 rounded-2xl border border-primary/40 ring-1 ring-primary/20 flex flex-col justify-between relative shadow-sm">
+        <div className="absolute -top-3 right-4 px-2 py-0.5 rounded bg-primary text-white text-[10px] font-bold uppercase tracking-wider">
+          FLAGSHIP SCHEDULER
+        </div>
+        <div>
+          <div className="text-xs uppercase font-bold tracking-widest text-primary mb-2">02 / SCHEDULE</div>
+          <h3 className="text-lg font-bold text-on-surface mb-2">
+            Advanced Planning &amp; Scheduling (APS)
+          </h3>
+          <p className="text-sm text-on-surface-variant leading-relaxed">
+            Leveraging Google OR-Tools CP-SAT algorithms to deliver buildable, real-time production schedules. 
+            Replan disruptions without restarting what the floor is running.
+          </p>
+        </div>
+        <a href="#gantt-preview" className="mt-4 pt-4 border-t border-surface-container text-xs font-semibold text-primary flex items-center gap-1">
+          Simulate CP-SAT Gantt →
+        </a>
+      </div>
+
+      {/* EXECUTE */}
+      <div className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/40 flex flex-col justify-between">
+        <div>
+          <div className="text-xs uppercase font-bold tracking-widest text-emerald-600 mb-2">03 / EXECUTE</div>
+          <h3 className="text-lg font-bold text-on-surface mb-2">
+            Manufacturing Execution System (MES)
+          </h3>
+          <p className="text-sm text-on-surface-variant leading-relaxed">
+            Predictive insights into production performance. End-to-end WIP traceability, batch genealogy, 
+            operator dispatch, and regulatory compliance (IATF 16949, FDA 21 CFR Part 11).
+          </p>
+        </div>
+        <Link href="/integrations" className="mt-4 pt-4 border-t border-surface-container text-xs font-semibold text-emerald-600 flex items-center gap-1">
+          Explore MES Handshake →
+        </Link>
+      </div>
+    </div>
+
+    {/* AI Agent Strip: Inspired by Eyelit's Agent EyeQ */}
+    <div className="bg-gradient-to-r from-surface-container-lowest via-surface-container to-surface-container-lowest p-6 sm:p-8 rounded-2xl border border-outline-variant/40 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="flex flex-col gap-2 max-w-2xl">
+        <div className="flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+          <span className="text-xs uppercase tracking-widest font-bold text-primary">AGENTIC INDUSTRIAL AI</span>
+        </div>
+        <h4 className="text-lg sm:text-xl font-bold text-on-surface">
+          Autonomous Industrial Agent: Observe • Reason • Act • Learn
+        </h4>
+        <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+          Ask plain-language questions like <em>&quot;Why is line 2 delayed, and can we still ship order 88-102 on Friday?&quot;</em> The agent reasons over live operational telemetry and proposes constraint-valid interventions with full audit logging and Caddy Mode human governance.
+        </p>
+      </div>
+      <div className="shrink-0 flex items-center gap-3">
+        <Link
+          href="/contact"
+          className="h-10 px-5 bg-primary hover:bg-primary-container text-white font-medium text-xs rounded-xl flex items-center justify-center transition-all shadow-sm"
+        >
+          Request Agent Demo
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+
 {/* SECTION 3: PROBLEM FRAMING (SPREADSHEET FAILURE MODES) */}
 <section className="w-full py-20 lg:py-28 bg-surface">
 <div className="max-w-7xl mx-auto px-margin flex flex-col gap-space-xl">
@@ -631,48 +745,91 @@ export default function Page() {
 </div>
 </div>
 </section>
-{/* SECTION 6: METRICS BAND */}
+{/* SECTION 6: OPERATIONAL EFFICIENCIES & ROI (INSPIRED BY EYELIT BENCHMARKS) */}
 <section className="w-full bg-surface-container-high py-16">
-<div className="max-w-7xl mx-auto px-margin">
-<div className="grid grid-cols-2 lg:grid-cols-4 gap-space-lg">
-<div className="flex flex-col gap-1 p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
-<span className="font-eyebrow text-eyebrow text-on-surface-variant uppercase">Horizon Capacity</span>
-<span className="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight font-tabular-mono">
-            1,782
-          </span>
-<span className="font-body-dense text-body-dense text-on-surface-variant">
-            Tasks scheduled per 3-month run
-          </span>
-</div>
-<div className="flex flex-col gap-1 p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
-<span className="font-eyebrow text-eyebrow text-on-surface-variant uppercase">Calculation Speed</span>
-<span className="font-headline-lg text-headline-lg font-bold text-primary tracking-tight font-tabular-mono">
-            &lt; 60s
-          </span>
-<span className="font-body-dense text-body-dense text-on-surface-variant">
-            Solve time across 6 routing stages
-          </span>
-</div>
-<div className="flex flex-col gap-1 p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
-<span className="font-eyebrow text-eyebrow text-on-surface-variant uppercase">Washdown Reduction</span>
-<span className="font-headline-lg text-headline-lg font-bold text-secondary tracking-tight font-tabular-mono">
-            -34%
-          </span>
-<span className="font-body-dense text-body-dense text-on-surface-variant">
-            Sequence-dependent changeover loss
-          </span>
-</div>
-<div className="flex flex-col gap-1 p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
-<span className="font-eyebrow text-eyebrow text-on-surface-variant uppercase">Customer Delivery</span>
-<span className="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight font-tabular-mono">
-            99.4%
-          </span>
-<span className="font-body-dense text-body-dense text-on-surface-variant">
-            On-time delivery commitment met
-          </span>
-</div>
-</div>
-</div>
+  <div className="max-w-7xl mx-auto px-margin">
+    <div className="text-center max-w-2xl mx-auto mb-10">
+      <span className="font-eyebrow text-eyebrow uppercase text-primary font-semibold tracking-wider">
+        PROVEN OPERATIONAL METRICS
+      </span>
+      <h3 className="text-2xl sm:text-3xl font-bold text-on-surface mt-1">
+        Achieve measurable plant efficiencies and rapid ROI.
+      </h3>
+    </div>
+    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-md">
+      <div className="flex flex-col gap-1 p-space-md bg-surface-container-lowest rounded-xl shadow-sm text-center">
+        <span className="font-headline-lg text-headline-lg font-bold text-primary tracking-tight font-tabular-mono">
+          15%
+        </span>
+        <span className="font-eyebrow text-eyebrow text-on-surface uppercase font-semibold">
+          Inventory Reduction
+        </span>
+        <span className="font-body-dense text-[12px] text-on-surface-variant">
+          WIP buffer &amp; safety stock
+        </span>
+      </div>
+
+      <div className="flex flex-col gap-1 p-space-md bg-surface-container-lowest rounded-xl shadow-sm text-center">
+        <span className="font-headline-lg text-headline-lg font-bold text-secondary tracking-tight font-tabular-mono">
+          10%
+        </span>
+        <span className="font-eyebrow text-eyebrow text-on-surface uppercase font-semibold">
+          Labor Cost Reduction
+        </span>
+        <span className="font-body-dense text-[12px] text-on-surface-variant">
+          Less overtime &amp; idle shifts
+        </span>
+      </div>
+
+      <div className="flex flex-col gap-1 p-space-md bg-surface-container-lowest rounded-xl shadow-sm text-center">
+        <span className="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight font-tabular-mono">
+          +12%
+        </span>
+        <span className="font-eyebrow text-eyebrow text-on-surface uppercase font-semibold">
+          Capacity Utilization
+        </span>
+        <span className="font-body-dense text-[12px] text-on-surface-variant">
+          Bottleneck equipment OEE
+        </span>
+      </div>
+
+      <div className="flex flex-col gap-1 p-space-md bg-surface-container-lowest rounded-xl shadow-sm text-center">
+        <span className="font-headline-lg text-headline-lg font-bold text-primary tracking-tight font-tabular-mono">
+          4%
+        </span>
+        <span className="font-eyebrow text-eyebrow text-on-surface uppercase font-semibold">
+          Asset Growth Control
+        </span>
+        <span className="font-body-dense text-[12px] text-on-surface-variant">
+          Defer CapEx expansions
+        </span>
+      </div>
+
+      <div className="flex flex-col gap-1 p-space-md bg-surface-container-lowest rounded-xl shadow-sm text-center">
+        <span className="font-headline-lg text-headline-lg font-bold text-secondary tracking-tight font-tabular-mono">
+          +5%
+        </span>
+        <span className="font-eyebrow text-eyebrow text-on-surface uppercase font-semibold">
+          Gross Margins
+        </span>
+        <span className="font-body-dense text-[12px] text-on-surface-variant">
+          Optimized product sequences
+        </span>
+      </div>
+
+      <div className="flex flex-col gap-1 p-space-md bg-surface-container-lowest rounded-xl shadow-sm text-center">
+        <span className="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight font-tabular-mono">
+          &lt; 45s
+        </span>
+        <span className="font-eyebrow text-eyebrow text-on-surface uppercase font-semibold">
+          CP-SAT Solve Speed
+        </span>
+        <span className="font-body-dense text-[12px] text-on-surface-variant">
+          594–1,782 discrete tasks
+        </span>
+      </div>
+    </div>
+  </div>
 </section>
 {/* SECTION 7: DEEP-DIVE SPLIT SECTIONS (50/50 ALTERNATING) */}
 <section className="w-full py-20 lg:py-28 bg-surface flex flex-col gap-space-xl">
@@ -909,30 +1066,43 @@ export default function Page() {
 </a>
 </div>
 </section>
-{/* SECTION 10: FINAL CALL TO ACTION */}
+{/* SECTION 10: FINAL CALL TO ACTION (INSPIRED BY EYELIT) */}
 <section className="w-full py-20 lg:py-28 bg-surface-container-low">
 <div className="max-w-5xl mx-auto px-margin">
-<div className="bg-surface-container-lowest p-space-xl lg:p-16 rounded-2xl shadow-md flex flex-col items-center text-center gap-space-lg">
-<span className="font-eyebrow text-eyebrow uppercase text-primary font-medium tracking-widest">
-          Deterministic Factory Control
-        </span>
-<h2 className="font-headline-lg text-headline-lg text-on-surface font-semibold max-w-2xl leading-tight">
-          Schedule your plant's real capacity.
-        </h2>
+<div className="bg-surface-container-lowest p-space-xl lg:p-16 rounded-3xl shadow-lg border border-outline-variant/40 flex flex-col items-center text-center gap-space-lg">
+<span className="font-eyebrow text-eyebrow uppercase text-primary font-semibold tracking-widest">
+  THE QUANTUM PRIMES // GET STARTED
+</span>
+<h2 className="font-headline-lg text-headline-lg text-on-surface font-bold max-w-2xl leading-tight">
+  Bring us the line nobody can schedule. We'll show you a plan you can build.
+</h2>
 <p className="font-body-default text-body-default text-on-surface-variant max-w-xl">
-          Stop flying blind on multi-shift changeovers. Run our solver against your real routing constraints and compare the throughput side-by-side.
-        </p>
+  Avoid another year of decisions made in silos, alerts with no explanation, and your best planners buried in spreadsheets. Let The Quantum Primes model your plant's real constraints.
+</p>
 <div className="flex flex-wrap items-center justify-center gap-space-md pt-2">
-<a className="h-11 px- space-xl bg-primary hover:bg-primary-container text-on-primary font-body-dense text-body-dense rounded flex items-center justify-center font-medium shadow-sm transition-colors px-6" href="/book-a-demo">
-            Book a 30-minute demo
-          </a>
-<a className="h-11 px- space-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-body-dense text-body-dense rounded flex items-center justify-center font-medium transition-colors px-6" href="/case-studies">
-            View sample workbook
-          </a>
+  <Link
+    className="h-12 px-8 bg-primary hover:bg-primary-container text-white font-medium text-sm rounded-xl flex items-center justify-center shadow-md transition-all active:scale-95"
+    href="/contact"
+  >
+    Contact The Quantum Primes
+  </Link>
+  <a
+    className="h-12 px-6 bg-surface-container hover:bg-surface-container-high text-on-surface font-medium text-sm rounded-xl flex items-center justify-center gap-2 transition-colors border border-outline-variant/40"
+    href="http://localhost:5173"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <span className="material-symbols-outlined text-primary text-[18px]">launch</span>
+    <span>Launch Scheduler Demo (5173)</span>
+  </a>
 </div>
-<div className="flex items-center gap-2 pt-2 text-on-surface-variant font-tabular-mono-dense text-tabular-mono-dense">
-<span className="material-symbols-outlined text-secondary text-[16px]">shield</span>
-<span>30-minute live demo. We'll run the solver against your own facility workbook.</span>
+<div className="flex items-center gap-3 pt-2 text-on-surface-variant font-body-dense text-xs">
+  <span className="inline-flex items-center gap-1 text-primary">
+    <span className="material-symbols-outlined text-[16px]">mail</span>
+    thequantumprimes@gmail.com
+  </span>
+  <span>•</span>
+  <span>We test against your own facility Excel workbook</span>
 </div>
 </div>
 </div>
