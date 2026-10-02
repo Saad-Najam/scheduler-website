@@ -50,7 +50,19 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
         </div>
 
         {/* Desktop Navigation - Clean, perfectly spaced & uncrowded */}
-        <nav className="hidden lg:flex items-center gap-3.5 xl:gap-7 h-full text-[13.5px] xl:text-[14px]">
+        <nav className="hidden lg:flex items-center gap-3 xl:gap-6 h-full text-[13.5px] xl:text-[14px]">
+          {/* Products & Services */}
+          <Link
+            href="/products"
+            className={`transition-colors py-2 flex items-center gap-1 text-[14px] font-medium ${
+              isActive('/products')
+                ? 'text-primary'
+                : 'text-on-surface-variant hover:text-on-surface'
+            }`}
+          >
+            <span>Products &amp; Services</span>
+          </Link>
+
           {/* Features with Mega Menu */}
           <div className="group relative h-full flex items-center">
             <Link
@@ -420,7 +432,15 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
             onClick={() => setMobileMenuOpen(false)}
             className="py-2 text-on-surface hover:text-primary font-medium transition-colors flex items-center justify-between"
           >
-            <span>Product Overview</span>
+            <span>Home</span>
+            <span className="material-symbols-outlined text-[18px]">chevron_right</span>
+          </Link>
+          <Link
+            href="/products"
+            onClick={() => setMobileMenuOpen(false)}
+            className="py-2 text-on-surface hover:text-primary font-medium transition-colors flex items-center justify-between"
+          >
+            <span>Products &amp; Services</span>
             <span className="material-symbols-outlined text-[18px]">chevron_right</span>
           </Link>
           <Link
