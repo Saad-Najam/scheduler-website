@@ -49,6 +49,9 @@ export default function CadenceFooter() {
             <Link href="/how-it-works" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
               Solver Architecture
             </Link>
+            <Link href="/solutions" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
+              APS Solutions Suite
+            </Link>
             <Link href="/roi-calculator" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
               ROI Payback Model
             </Link>

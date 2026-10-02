@@ -118,6 +118,73 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
             </div>
           </div>
 
+          {/* Solutions with Mega Menu */}
+          <div className="group relative h-full flex items-center">
+            <Link
+              href="/solutions"
+              className={`transition-colors py-2 flex items-center gap-1 text-[14px] font-medium ${
+                isActive('/solutions')
+                  ? 'text-primary'
+                  : 'text-on-surface-variant hover:text-on-surface'
+              }`}
+            >
+              <span>Solutions</span>
+              <span className="material-symbols-outlined text-[15px] opacity-60 group-hover:rotate-180 transition-transform duration-200">
+                expand_more
+              </span>
+            </Link>
+            <div className="mega-menu opacity-0 invisible translate-y-1 transition-all duration-150 absolute top-14 -left-4 sm:-left-8 w-[540px] max-w-[calc(100vw-2rem)] bg-surface-container-lowest border border-outline-variant shadow-2xl rounded-2xl p-5 pointer-events-none grid grid-cols-2 gap-4 z-50">
+              <Link
+                href="/solutions"
+                className="p-3 rounded-xl hover:bg-surface-container-low transition-all group/item"
+              >
+                <div className="font-medium text-[15px] text-on-surface mb-1 flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-[18px]">account_tree</span>
+                  <span>Advanced Planning &amp; Scheduling</span>
+                </div>
+                <div className="text-[13px] text-on-surface-variant leading-snug">
+                  Finite-capacity APS core for multi-plant discrete factories.
+                </div>
+              </Link>
+              <Link
+                href="/solutions#how-it-works-eyelit"
+                className="p-3 rounded-xl hover:bg-surface-container-low transition-all group/item"
+              >
+                <div className="font-medium text-[15px] text-on-surface mb-1 flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-[18px]">tune</span>
+                  <span>Plan &amp; Schedule in One Model</span>
+                </div>
+                <div className="text-[13px] text-on-surface-variant leading-snug">
+                  4-stage workflow: capacity, change, visibility &amp; deployment.
+                </div>
+              </Link>
+              <Link
+                href="/solutions"
+                className="p-3 rounded-xl hover:bg-surface-container-low transition-all group/item"
+              >
+                <div className="font-medium text-[15px] text-on-surface mb-1 flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-[18px]">psychology</span>
+                  <span>Industrial Agent AI</span>
+                </div>
+                <div className="text-[13px] text-on-surface-variant leading-snug">
+                  Agentic connective tissue with Caddy Mode governance.
+                </div>
+              </Link>
+              <Link
+                href="/case-studies"
+                className="p-3 rounded-xl hover:bg-surface-container-low transition-all group/item"
+              >
+                <div className="font-medium text-[15px] text-on-surface mb-1 flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-[18px]">verified</span>
+                  <span>Plant Outcomes &amp; Case Studies</span>
+                </div>
+                <div className="text-[13px] text-on-surface-variant leading-snug">
+                  Real plant benchmarks, OEE gains, and setup reductions.
+                </div>
+              </Link>
+            </div>
+          </div>
+
           {/* Industries with Mega Menu */}
           <div className="group relative h-full flex items-center">
             <Link
@@ -378,6 +445,14 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
             className="py-2 text-on-surface hover:text-primary font-medium transition-colors flex items-center justify-between"
           >
             <span>How It Works (Solver Architecture)</span>
+            <span className="material-symbols-outlined text-[18px]">chevron_right</span>
+          </Link>
+          <Link
+            href="/solutions"
+            onClick={() => setMobileMenuOpen(false)}
+            className="py-2 text-on-surface hover:text-primary font-medium transition-colors flex items-center justify-between"
+          >
+            <span>Solutions (APS Platform)</span>
             <span className="material-symbols-outlined text-[18px]">chevron_right</span>
           </Link>
           <Link
