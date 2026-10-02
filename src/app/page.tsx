@@ -329,8 +329,8 @@ export default function Page() {
             Eliminate distributor inventory distortion and promise reliable delivery dates based on real capacity.
           </p>
         </div>
-        <Link href="/solutions" className="mt-4 pt-4 border-t border-surface-container text-xs font-semibold text-primary flex items-center gap-1">
-          Explore SIOP Capabilities →
+        <Link href="/industries" className="mt-4 pt-4 border-t border-surface-container text-xs font-semibold text-primary flex items-center gap-1">
+          Explore Industry Topologies →
         </Link>
       </div>
 
@@ -1060,10 +1060,10 @@ export default function Page() {
 <span className="font-eyebrow text-[10px] text-on-surface-variant uppercase">Delta Lake Live Sync</span>
 </div>
 </div>
-<a className="font-body-dense text-body-dense text-primary font-semibold hover:underline flex items-center gap-1" href="/docs">
+<Link className="font-body-dense text-body-dense text-primary font-semibold hover:underline flex items-center gap-1" href="/integrations">
 <span>View all 24+ native ERP &amp; MES connectors</span>
 <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-</a>
+</Link>
 </div>
 </section>
 {/* SECTION 10: FINAL CALL TO ACTION (INSPIRED BY EYELIT) */}

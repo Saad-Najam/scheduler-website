@@ -12,10 +12,10 @@ const SVG = {
 };
 
 const navLinks = [
-  { label: 'Product', href: '#features' },
-  { label: 'Solutions', href: '#solutions' },
+  { label: 'Features', href: '#features' },
+  { label: 'Industries', href: '#industries' },
   { label: 'ROI Calculator', href: '#roi-calculator' },
-  { label: 'Comparison', href: '#comparison' },
+  { label: 'Integrations', href: '#integrations' },
 ];
 
 interface NavbarProps { onOpenDemoModal: () => void; }

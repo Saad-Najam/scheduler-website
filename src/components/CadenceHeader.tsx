@@ -51,32 +51,32 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
 
         {/* Desktop Navigation - Clean, perfectly spaced & uncrowded */}
         <nav className="hidden lg:flex items-center gap-3.5 xl:gap-7 h-full text-[13.5px] xl:text-[14px]">
-          {/* Product with Mega Menu */}
+          {/* Features with Mega Menu */}
           <div className="group relative h-full flex items-center">
             <Link
-              href="/"
+              href="/features"
               className={`transition-colors py-2 flex items-center gap-1 text-[14px] font-medium ${
-                isActive('/') && pathname === '/'
+                isActive('/features')
                   ? 'text-primary'
                   : 'text-on-surface-variant hover:text-on-surface'
               }`}
             >
-              <span>Product</span>
+              <span>Features</span>
               <span className="material-symbols-outlined text-[15px] opacity-60 group-hover:rotate-180 transition-transform duration-200">
                 expand_more
               </span>
             </Link>
             <div className="mega-menu opacity-0 invisible translate-y-1 transition-all duration-150 absolute top-14 -left-4 sm:-left-8 w-[540px] max-w-[calc(100vw-2rem)] bg-surface-container-lowest border border-outline-variant shadow-2xl rounded-2xl p-5 pointer-events-none grid grid-cols-2 gap-4 z-50">
               <Link
-                href="/products"
+                href="/features"
                 className="p-3 rounded-xl hover:bg-surface-container-low transition-all group/item"
               >
                 <div className="font-medium text-[15px] text-on-surface mb-1 flex items-center gap-2">
                   <span className="material-symbols-outlined text-primary text-[18px]">account_tree</span>
-                  <span>Engine Architecture</span>
+                  <span>CP-SAT Discrete Engine</span>
                 </div>
                 <div className="text-[13px] text-on-surface-variant leading-snug">
-                  Deterministic mathematical CP-SAT core specifications.
+                  Deterministic mathematical CP-SAT core capabilities.
                 </div>
               </Link>
               <Link
@@ -109,33 +109,33 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
               >
                 <div className="font-medium text-[15px] text-on-surface mb-1 flex items-center gap-2">
                   <span className="material-symbols-outlined text-primary text-[18px]">sync_alt</span>
-                  <span>ERP Connectors</span>
+                  <span>Bi-Directional Sync</span>
                 </div>
                 <div className="text-[13px] text-on-surface-variant leading-snug">
-                  Bi-directional handshake for SAP, NetSuite, Dynamics & Plex.
+                  Real-time ERP &amp; MES telemetry handshake.
                 </div>
               </Link>
             </div>
           </div>
 
-          {/* Solutions with Mega Menu */}
+          {/* Industries with Mega Menu */}
           <div className="group relative h-full flex items-center">
             <Link
-              href="/solutions"
+              href="/industries"
               className={`transition-colors py-2 flex items-center gap-1 text-[14px] font-medium ${
-                isActive('/solutions')
+                isActive('/industries')
                   ? 'text-primary'
                   : 'text-on-surface-variant hover:text-on-surface'
               }`}
             >
-              <span>Solutions</span>
+              <span>Industries</span>
               <span className="material-symbols-outlined text-[15px] opacity-60 group-hover:rotate-180 transition-transform duration-200">
                 expand_more
               </span>
             </Link>
             <div className="mega-menu opacity-0 invisible translate-y-1 transition-all duration-150 absolute top-14 -left-4 sm:-left-8 w-[540px] max-w-[calc(100vw-2rem)] bg-surface-container-lowest border border-outline-variant shadow-2xl rounded-2xl p-5 pointer-events-none grid grid-cols-2 gap-4 z-50">
               <Link
-                href="/solutions"
+                href="/industries"
                 className="p-3 rounded-xl hover:bg-surface-container-low transition-all"
               >
                 <div className="font-medium text-[15px] text-on-surface mb-1 flex items-center gap-2">
@@ -147,7 +147,7 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
                 </div>
               </Link>
               <Link
-                href="/solutions"
+                href="/industries"
                 className="p-3 rounded-xl hover:bg-surface-container-low transition-all"
               >
                 <div className="font-medium text-[15px] text-on-surface mb-1 flex items-center gap-2">
@@ -159,7 +159,7 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
                 </div>
               </Link>
               <Link
-                href="/solutions"
+                href="/industries"
                 className="p-3 rounded-xl hover:bg-surface-container-low transition-all"
               >
                 <div className="font-medium text-[15px] text-on-surface mb-1 flex items-center gap-2">
@@ -171,7 +171,7 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
                 </div>
               </Link>
               <Link
-                href="/solutions"
+                href="/industries"
                 className="p-3 rounded-xl hover:bg-surface-container-low transition-all"
               >
                 <div className="font-medium text-[15px] text-on-surface mb-1 flex items-center gap-2">
@@ -185,16 +185,72 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
             </div>
           </div>
 
-          <Link
-            href="/contact"
-            className={`transition-colors py-2 text-[14px] font-medium ${
-              isActive('/contact')
-                ? 'text-primary'
-                : 'text-on-surface-variant hover:text-on-surface'
-            }`}
-          >
-            Contact
-          </Link>
+          {/* Integrations with Mega Menu */}
+          <div className="group relative h-full flex items-center">
+            <Link
+              href="/integrations"
+              className={`transition-colors py-2 flex items-center gap-1 text-[14px] font-medium ${
+                isActive('/integrations')
+                  ? 'text-primary'
+                  : 'text-on-surface-variant hover:text-on-surface'
+              }`}
+            >
+              <span>Integrations</span>
+              <span className="material-symbols-outlined text-[15px] opacity-60 group-hover:rotate-180 transition-transform duration-200">
+                expand_more
+              </span>
+            </Link>
+            <div className="mega-menu opacity-0 invisible translate-y-1 transition-all duration-150 absolute top-14 -left-4 sm:-left-8 w-[500px] max-w-[calc(100vw-2rem)] bg-surface-container-lowest border border-outline-variant shadow-2xl rounded-2xl p-5 pointer-events-none grid grid-cols-2 gap-4 z-50">
+              <Link
+                href="/integrations#erp"
+                className="p-3 rounded-xl hover:bg-surface-container-low transition-all"
+              >
+                <div className="font-medium text-[15px] text-on-surface mb-1 flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-[18px]">database</span>
+                  <span>ERP Connectors</span>
+                </div>
+                <div className="text-[13px] text-on-surface-variant leading-snug">
+                  SAP S/4HANA, NetSuite, Dynamics 365 &amp; Odoo.
+                </div>
+              </Link>
+              <Link
+                href="/integrations#mes"
+                className="p-3 rounded-xl hover:bg-surface-container-low transition-all"
+              >
+                <div className="font-medium text-[15px] text-on-surface mb-1 flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-[18px]">precision_manufacturing</span>
+                  <span>MES &amp; SCADA</span>
+                </div>
+                <div className="text-[13px] text-on-surface-variant leading-snug">
+                  Plex, AVEVA Wonderware, OPC-UA &amp; Ignition.
+                </div>
+              </Link>
+              <Link
+                href="/docs"
+                className="p-3 rounded-xl hover:bg-surface-container-low transition-all"
+              >
+                <div className="font-medium text-[15px] text-on-surface mb-1 flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-[18px]">terminal</span>
+                  <span>REST API &amp; Webhooks</span>
+                </div>
+                <div className="text-[13px] text-on-surface-variant leading-snug">
+                  OpenAPI v3 endpoints and live dispatch webhooks.
+                </div>
+              </Link>
+              <Link
+                href="/integrations#custom"
+                className="p-3 rounded-xl hover:bg-surface-container-low transition-all"
+              >
+                <div className="font-medium text-[15px] text-on-surface mb-1 flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-[18px]">hub</span>
+                  <span>Custom Adapters</span>
+                </div>
+                <div className="text-[13px] text-on-surface-variant leading-snug">
+                  Custom flat files, SFTP, and proprietary databases.
+                </div>
+              </Link>
+            </div>
+          </div>
 
           <Link
             href="/roi-calculator"
@@ -218,72 +274,16 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
             Case Studies
           </Link>
 
-          {/* Resources / Platform Dropdown */}
-          <div className="group relative h-full flex items-center">
-            <button
-              type="button"
-              className={`transition-colors py-2 flex items-center gap-1 text-[14px] font-medium ${
-                isActive('/docs') || isActive('/integrations') || isActive('/security')
-                  ? 'text-primary'
-                  : 'text-on-surface-variant hover:text-on-surface'
-              }`}
-            >
-              <span>Platform</span>
-              <span className="material-symbols-outlined text-[15px] opacity-60 group-hover:rotate-180 transition-transform duration-200">
-                expand_more
-              </span>
-            </button>
-            <div className="mega-menu opacity-0 invisible translate-y-1 transition-all duration-150 absolute top-14 right-0 lg:-left-16 w-[480px] max-w-[calc(100vw-2rem)] bg-surface-container-lowest border border-outline-variant shadow-2xl rounded-2xl p-5 pointer-events-none grid grid-cols-2 gap-4 z-50">
-              <Link
-                href="/docs"
-                className="p-3 rounded-xl hover:bg-surface-container-low transition-all"
-              >
-                <div className="font-medium text-[15px] text-on-surface mb-1 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-primary text-[18px]">terminal</span>
-                  <span>Developer Docs & API</span>
-                </div>
-                <div className="text-[13px] text-on-surface-variant leading-snug">
-                  REST endpoints, schemas, and CP-SAT solver references.
-                </div>
-              </Link>
-              <Link
-                href="/integrations"
-                className="p-3 rounded-xl hover:bg-surface-container-low transition-all"
-              >
-                <div className="font-medium text-[15px] text-on-surface mb-1 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-primary text-[18px]">hub</span>
-                  <span>Integrations Hub</span>
-                </div>
-                <div className="text-[13px] text-on-surface-variant leading-snug">
-                  24+ native ERP, MES, and SCADA connectors.
-                </div>
-              </Link>
-              <Link
-                href="/security"
-                className="p-3 rounded-xl hover:bg-surface-container-low transition-all"
-              >
-                <div className="font-medium text-[15px] text-on-surface mb-1 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-primary text-[18px]">shield</span>
-                  <span>Security & Compliance</span>
-                </div>
-                <div className="text-[13px] text-on-surface-variant leading-snug">
-                  Air-gapped deployment, SOC 2, and zero-egress mode.
-                </div>
-              </Link>
-              <Link
-                href="/company"
-                className="p-3 rounded-xl hover:bg-surface-container-low transition-all"
-              >
-                <div className="font-medium text-[15px] text-on-surface mb-1 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-primary text-[18px]">corporate_fare</span>
-                  <span>Company & Team</span>
-                </div>
-                <div className="text-[13px] text-on-surface-variant leading-snug">
-                  Operations research philosophy and engineering ethos.
-                </div>
-              </Link>
-            </div>
-          </div>
+          <Link
+            href="/contact"
+            className={`transition-colors py-2 text-[14px] font-medium ${
+              isActive('/contact')
+                ? 'text-primary'
+                : 'text-on-surface-variant hover:text-on-surface'
+            }`}
+          >
+            Contact
+          </Link>
         </nav>
 
         {/* Right Action Controls */}
@@ -365,11 +365,11 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
             <span className="material-symbols-outlined text-[18px]">chevron_right</span>
           </Link>
           <Link
-            href="/products"
+            href="/features"
             onClick={() => setMobileMenuOpen(false)}
             className="py-2 text-on-surface hover:text-primary font-medium transition-colors flex items-center justify-between"
           >
-            <span>Engine Architecture &amp; Specs</span>
+            <span>Platform Features</span>
             <span className="material-symbols-outlined text-[18px]">chevron_right</span>
           </Link>
           <Link
@@ -381,11 +381,11 @@ export default function CadenceHeader({ onOpenDemoModal }: HeaderProps) {
             <span className="material-symbols-outlined text-[18px]">chevron_right</span>
           </Link>
           <Link
-            href="/solutions"
+            href="/industries"
             onClick={() => setMobileMenuOpen(false)}
             className="py-2 text-on-surface hover:text-primary font-medium transition-colors flex items-center justify-between"
           >
-            <span>Industry Solutions</span>
+            <span>Target Industries</span>
             <span className="material-symbols-outlined text-[18px]">chevron_right</span>
           </Link>
           <Link

@@ -24,7 +24,9 @@ export default function RoiCalculatorPage() {
   const annualSavings = hoursReclaimed * hourlyCost;
   const pilotCost = 45000;
   const paybackMonths = Math.max(0.8, Number(((pilotCost / annualSavings) * 12).toFixed(1)));
-  const oeeGain = (reductionRate * (totalChangeoverHours / (lines * 52 * 120)) * 100).toFixed(1);
+  // Annual operating hours per facility: lines * 52 weeks * 5 days/wk * shifts * 8 hrs/shift
+  const totalOperatingHoursYear = lines * 52 * 5 * shifts * 8;
+  const oeeGain = ((hoursReclaimed / totalOperatingHoursYear) * 100).toFixed(1);
 
   return (
     <div className="min-h-screen bg-surface text-on-surface flex flex-col selection:bg-primary/20 transition-colors">

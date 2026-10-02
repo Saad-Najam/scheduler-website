@@ -8,11 +8,18 @@ export default function RoiCalculator({ onOpenDemoModal }: RoiProps) {
   const [rate, setRate] = useState(85);
   const [setupHrs, setSetupHrs] = useState(30);
 
-  const savedHrs = Math.round(setupHrs * 52 * 0.45);
-  const laborSavings = Math.round(savedHrs * rate * machines * 0.28);
-  const capacityGain = Math.round(machines * 46000);
-  const total = laborSavings + capacityGain;
-  const payback = (48000 / (total / 12)).toFixed(1);
+  // Accurate plant economic model
+  // Setup hours saved per machine per year (assumes 42% setup reduction via TSP Hamiltonian sequencing)
+  const setupReductionRate = 0.42;
+  const savedHrsPerMachine = Math.round(setupHrs * 52 * setupReductionRate);
+  const totalSavedHrs = savedHrsPerMachine * machines;
+  // Direct downtime & labor overhead savings
+  const directSavings = Math.round(totalSavedHrs * rate);
+  // Reclaimed throughput / capacity value (extra production revenue generated during recovered line time)
+  const capacityValue = Math.round(totalSavedHrs * rate * 0.65);
+  const total = directSavings + capacityValue;
+  // Implementation payback in months ($48k pilot cost)
+  const payback = total > 0 ? Math.max(0.6, Number(((48000 / total) * 12).toFixed(1))) : 0;
 
   const sliders = [
     { label: 'Machines / Work Centers', min: 5, max: 150, step: 5, value: machines, set: setMachines, display: `${machines} machines`, color: '#2563eb' },
@@ -85,7 +92,7 @@ export default function RoiCalculator({ onOpenDemoModal }: RoiProps) {
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
                 {[
-                  { label: 'Hours Saved Annually', value: `${savedHrs.toLocaleString()} hrs`, color: '#facc15' },
+                  { label: 'Hours Saved Annually', value: `${totalSavedHrs.toLocaleString()} hrs`, color: '#facc15' },
                   { label: 'Payback Period', value: `${payback} months`, color: '#38bdf8' },
                 ].map(m => (
                   <div key={m.label} style={{

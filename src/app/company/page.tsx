@@ -151,7 +151,7 @@ export default function CompanyPage() {
                   What The Quantum Primes builds for modern industry.
                 </h2>
                 <p className="text-base text-on-surface-variant mt-3 leading-relaxed">
-                  We bridge the divide between theoretical operations research and dirty-boots shop floor reality. Our solutions span the entire manufacturing lifecycle:
+                  We bridge the divide between theoretical operations research and dirty-boots shop floor reality. Our platform capabilities span target manufacturing industries across the entire production lifecycle:
                 </p>
               </div>
 

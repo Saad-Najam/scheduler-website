@@ -2,24 +2,24 @@
 import React from 'react';
 
 const links = {
-  product: [
+  features: [
     { label: 'Finite Capacity Engine', href: '#features' },
     { label: 'What-If Digital Twin', href: '#features' },
     { label: 'AI Bottleneck Predictor', href: '#features' },
-    { label: 'ERP / MES Connectors', href: '#features' },
+    { label: 'ERP / MES Connectors', href: '/integrations' },
     { label: 'Scheduler Portal', href: 'http://localhost:5173', external: true },
   ],
   industries: [
-    { label: 'Automotive OEM', href: '#solutions' },
-    { label: 'Aerospace & Defense', href: '#solutions' },
-    { label: 'Heavy Industrial', href: '#solutions' },
-    { label: 'Electronics & SMT', href: '#solutions' },
-    { label: 'Pharma & Medical', href: '#solutions' },
+    { label: 'Automotive OEM', href: '/industries' },
+    { label: 'Aerospace & Defense', href: '/industries' },
+    { label: 'Heavy Industrial', href: '/industries' },
+    { label: 'Electronics & SMT', href: '/industries' },
+    { label: 'Pharma & Medical', href: '/industries' },
   ],
   company: [
-    { label: 'vs PlanetTogether', href: '#comparison' },
-    { label: 'ROI Calculator', href: '#roi-calculator' },
-    { label: 'Whitepapers', href: '#' },
+    { label: 'Integrations Hub', href: '/integrations' },
+    { label: 'ROI Calculator', href: '/roi-calculator' },
+    { label: 'Target Industries', href: '/industries' },
   ],
 };
 
@@ -49,11 +49,11 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Product */}
+          {/* Features */}
           <div>
-            <div style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.08em', color: '#f4f4f5', marginBottom: 14 }}>Product</div>
+            <div style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.08em', color: '#f4f4f5', marginBottom: 14 }}>Features</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
-              {links.product.map(l => (
+              {links.features.map(l => (
                 <a key={l.href} href={l.href} target={(l as any).external ? '_blank' : undefined} rel={(l as any).external ? 'noreferrer' : undefined}
                   style={{ fontSize: 13, color: '#71717a', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 4, transition: 'color .15s' }}
                   onMouseOver={e => (e.target as any).style.color='#f4f4f5'}

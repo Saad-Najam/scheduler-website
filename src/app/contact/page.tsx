@@ -391,7 +391,7 @@ export default function ContactPage() {
                     {/* Interested In Pills */}
                     <div>
                       <label className="block text-xs font-semibold text-on-surface-variant uppercase tracking-wider mb-2">
-                        Solutions of Interest (Select all that apply)
+                        Features &amp; Capabilities of Interest (Select all that apply)
                       </label>
                       <div className="flex flex-wrap gap-2">
                         {productOptions.map((prod) => {

@@ -36,14 +36,14 @@ const industries = [
 
 export default function IndustrySolutions() {
   return (
-    <section id="solutions" className="section section-alt">
+    <section id="industries" className="section section-alt">
       <div className="wrap">
 
         <div className="section-head">
-          <div className="section-label">Industry Rulesets</div>
+          <div className="section-label">Target Industries</div>
           <h2 className="h2">Engineered for your shop floor</h2>
           <p className="lead" style={{ marginTop: 12 }}>
-            Every sector has unique constraints. OptiSched ships pre-configured constraint models for your industry.
+            Every sector has unique constraints. OptiSched ships pre-configured constraint models tailored for your target industry.
           </p>
         </div>
 

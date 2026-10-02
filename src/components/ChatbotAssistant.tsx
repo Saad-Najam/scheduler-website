@@ -42,7 +42,7 @@ export default function ChatbotAssistant() {
 
   const quickChips = [
     'What does The Quantum Primes do?',
-    'Tell me about the Production Scheduler product',
+    'Tell me about the Scheduler features & capabilities',
     'How do I test our factory Excel workbook?',
     'What solver does Cadence use?',
     'How do I contact sales or book a demo?',

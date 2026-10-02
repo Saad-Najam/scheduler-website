@@ -35,45 +35,44 @@ export default function CadenceFooter() {
             </div>
           </div>
 
-          {/* Column 3: Product */}
+          {/* Column 3: Features */}
           <div className="flex flex-col gap-space-sm">
             <span className="font-eyebrow text-eyebrow uppercase text-on-surface-variant font-semibold tracking-wider">
-              Product
+              Features
             </span>
-            <Link href="/#gantt-preview" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
-              Constraint Solver
+            <Link href="/features" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
+              Core Capabilities
             </Link>
             <Link href="/#gantt-preview" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
               Interactive Gantt
             </Link>
             <Link href="/how-it-works" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
-              Sequence Matrix
+              Solver Architecture
             </Link>
             <Link href="/roi-calculator" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
               ROI Payback Model
             </Link>
-
           </div>
 
-          {/* Column 4: Solutions */}
+          {/* Column 4: Industries */}
           <div className="flex flex-col gap-space-sm">
             <span className="font-eyebrow text-eyebrow uppercase text-on-surface-variant font-semibold tracking-wider">
-              Solutions
+              Industries
             </span>
-            <Link href="/solutions#fmcg" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
+            <Link href="/industries" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
               FMCG Operations
             </Link>
-            <Link href="/solutions#pharma" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
-              Pharma & Life Sciences
+            <Link href="/industries" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
+              Pharma &amp; Life Sciences
             </Link>
-            <Link href="/solutions#food" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
-              Food & Beverage
+            <Link href="/industries" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
+              Food &amp; Beverage
             </Link>
-            <Link href="/solutions#converting" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
+            <Link href="/industries" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
               Precision Converting
             </Link>
-            <Link href="/solutions#automotive" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
-              Automotive Tier 1
+            <Link href="/industries" className="font-body-dense text-body-dense text-on-surface-variant hover:text-on-surface transition-colors">
+              Chemicals &amp; Resins
             </Link>
           </div>
 
